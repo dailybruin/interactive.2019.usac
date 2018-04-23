@@ -23,11 +23,13 @@
     "prettier": "^1.12.1"
   },
   "scripts": {
-    "precommit": "lint-staged",
     "format": "prettier --write \"{src,tests}/**/*.ts\" --single-quote --trailing-comma es5",
     "lint": "eslint --fix verbose \"src/**/*.js\"",
     "watch": "parcel index.html",
     "build": "parcel build index.html --public-url ./"
+  },
+  "husky": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
