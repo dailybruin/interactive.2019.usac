@@ -7,10 +7,10 @@ import ProfilePage from "./ProfilesPage";
 
 class Main extends React.Component {
   render() {
-    return(
+    return (
       <div>
         <Switch>
-          <Route exact path='/' component={ProfilePage}/>
+          <Route exact path='/candidates' component={ProfilePage}/>
           <Route path='/endorsements' component={EndorsementsPage}/>
           <Route path='/results' component={ResultsPage}/>
           <Route path='/violations' component={SanctionsPage}/>
