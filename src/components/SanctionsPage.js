@@ -35,7 +35,14 @@ class SanctionsPage extends React.Component {
       return <div>Loading...</div>;
     }
     table = this.state.candidates.map(position => {
-      return <SanctionsTable key={position.position} positionData={position} />;
+      return (
+        <SanctionsTable
+          key={position.position}
+          positionData={position}
+          sanctions={this.state.sanctionData}
+          candidateData={position.candidates}
+        />
+      );
     });
     // Group candidates by position
 
