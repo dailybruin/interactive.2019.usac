@@ -1,0 +1,189 @@
+.candidate_image {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 100;
+/*  font-family: "Segoe UI";
+  letter-spacing: 1px;*/
+}
+.candidate_image:before {
+  border-radius: 200px;
+  border: 3px solid #468cdc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 230px;
+  width: 230px;
+  margin-left: -118px;
+  margin-top: -118px;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+.candidate_image:hover:before {
+  transform: scale(1.05);
+}
+.candidate_image.circle {
+/*  background-image: url(https://www.w3schools.com/images/w3schools_green.jpg);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  border: none;
+  color: #e4ecfa;
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+.candidate_image.circle:hover {
+  padding: -2px;
+}
+.candidate_card{
+  display: inline-block;
+  margin: 0px 30px 30px 0px;
+  width: 300px;
+  height: 300px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #DCDCDC;
+}
+.positionRow{
+  font-size: 20px;
+  height: auto;
+  border-color: gray;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.positionCandidates{
+  display:flex;
+/*  justify-content: center;*/
+  flex-wrap: wrap;
+}
+.positionName{
+/*  text-align: center;*/
+  padding-bottom: :10px;
+  font-family: 'Overpass Mono', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.candidateName{
+  padding-top: 20px;
+  padding-left: 10px;
+  font-family: 'Overpass Mono', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+/*  text-align: center;*/
+}
+.candidateSlate{
+  font-family: 'Overpass Mono', sans-serif;
+  font-size: 12px;
+  padding-left: 12px;
+  color: gray;
+  /*text-align: center;*/
+}
+
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  width: auto;
+  height:auto;
+  top: 40%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: white;
+/*  display: inline-flex;*/
+}
+@media (min-width: 20em) {
+  .modal {
+    width: 95%;
+  }
+}
+@media (min-width: 34em) {
+  .modal {
+    width: 80%;
+  }
+}
+@media (min-width: 60em) {
+  .modal {
+    width: 60%;
+  }
+}
+.modal img {
+  width: 50%;
+  border: 5px solid #fff;
+  overflow: hidden;
+  top: 0%;
+
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+
+.modal-body a {
+  position: absolute;
+  display: inline;
+  color: #222;
+  text-decoration: none;
+  line-height: 36px;
+  font-size: 30px;
+  font-weight: lighter;
+  background: #fff;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+.modal-body .modal-close {
+  right: 0;
+  top: 0;
+  border-radius: 0 0 0 5px;
+}
+
+.modal-body .modal-next,
+.modal-body .modal-prev {
+  right: 0;
+  top: calc(50% - 25px);
+  border-radius: 5px 0 0 5px;
+  height: 50px;
+  line-height: 40px;
+  font-size: 60px;
+}
+
+.modal-body .modal-prev {
+  left: 0;
+  right: auto;
+  border-radius: 0 5px 5px 0;
+}
+
+.modal-body {
+  position: relative;
+}
+.candidateOverlay{
+  display: inline-block;
+  vertical-align: top;
+/*  float: left;*/
+}
+.candidateOverlayPlatform{
+  padding-top: 15px;
+  padding-left: 12px;
+}
