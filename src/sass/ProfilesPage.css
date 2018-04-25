@@ -51,8 +51,8 @@
 .candidate_card{
   display: inline-block;
   margin: 0px 30px 30px 0px;
-  width: 300px;
-  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
   border-style: solid;
   border-width: 3px;
   border-color: #DCDCDC;
@@ -62,7 +62,7 @@
   height: auto;
   border-color: gray;
   padding-left: 50px;
-  padding-top: 50px;
+  padding-top: 35px;
 }
 .positionCandidates{
   display:flex;
@@ -189,10 +189,12 @@
 }
 
 .dropdown-width {
-  width: 20rem;
+  width: 40vw;
+  min-width: 300px;
 }
 
 .bd-dropdown {
+  padding: 35px 0px 0px 50px;
   position: relative;
   font-size: 1rem;
 }

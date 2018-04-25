@@ -150,7 +150,7 @@ class ProfilePage extends React.Component {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", 'https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/', false ); // false for synchronous request
     xmlHttp.send( null );
-    candidates = [];
+
     this.state = {
     	// candidates: JSON.parse(xmlHttp.responseText)['data']['data.aml']['profiles'],
     	candidates: data['data']['data.aml']['profiles'],
@@ -215,7 +215,7 @@ class ProfilePage extends React.Component {
   		let style = {
   			backgroundImage: "url(" + candidate.image + ")",
   		};
-		return <div className="candidate_card" onClick={(e) => this.openModal(e, offset+index)} index="{offset+index}">
+		return <div className="candidate_card" onClick={(e) => this.openModal(e, offset+index)} key={index} index="{offset+index}">
 			<div className="candidate_image circle" style={style}></div>
 			<div className="candidateName">{candidate.name}</div>
 			<div className="candidateSlate">{candidate.slate}</div>
@@ -225,10 +225,10 @@ class ProfilePage extends React.Component {
   }
   printPositions(){
   	let index = 0;
-  	const positions = this.state.candidates.map(function(positionInfo){
+  	const positions = this.state.candidates.map(function(positionInfo, i){
   		index += positionInfo.candidates.length;
   		if (this.state.displayValue == positionInfo.position || this.state.displayValue == "All")
-	  		return <div className="positionRow">
+	  		return <div className="positionRow" key={i}>
 		  			<div className="positionName">
 		  				{positionInfo.position}
 		  			</div>
