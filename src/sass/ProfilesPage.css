@@ -93,7 +93,9 @@
   /*text-align: center;*/
 }
 
-
+.candidatemodalinfo{
+  display:inline-block;
+}
 .modal {
   position: fixed;
   z-index: 999;
@@ -103,11 +105,12 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   background-color: white;
+  min-width:1000px;
 /*  display: inline-flex;*/
 }
 @media (min-width: 20em) {
   .modal {
-    width: 95%;
+    width: 85%;
   }
 }
 @media (min-width: 34em) {
@@ -120,8 +123,16 @@
     width: 60%;
   }
 }
+/*@media only screen and (max-width: 500px) {
+    .candidateOverlay{
+      display: block;
+      text-align: center;
+    
+    }
+}*/
 .modal img {
-  width: 50%;
+  width: 40%;
+  min-width: 300px;
   border: 5px solid #fff;
   overflow: hidden;
   top: 0%;
