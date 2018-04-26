@@ -1,0 +1,22 @@
+#referenda-wrapper {
+  max-width: 50%;
+}
+
+.referendum-card {
+  border-style: solid;
+  border-width: 1px;
+  margin: 20px 10px;
+  padding: 10px;
+}
+
+.referendum-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 2em;
+  margin: 2px 0;
+}
+
+.referendum-desc {
+  font-family: 'Overpass Mono', sans-serif;
+  font-size: 1em;
+  margin: 2px 0;
+}
