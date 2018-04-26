@@ -271,10 +271,27 @@
 }
 
 .candidateOverlay{
-  vertical-align: top;
-  display:inline-block;
+<<<<<<< HEAD
   flex-direction: column;
   flex: 1;
+}
+
+.candidateOverlayName {
+  font-size: 30px;
+  font-weight: bold;
+  flex: 1;
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
+.candidateOverlaySlate {
+  flex: 1;
+  font-style: italic;
+  margin-bottom: 5px;
+=======
+  vertical-align: top;
+  display:inline-block;
+
 }
 @media only screen and (max-device-width: 700px){
   .candidateOverlay{
@@ -300,17 +317,15 @@
     margin-left: auto;
     margin-right: auto;
   }
+>>>>>>> master
 }
+
 .candidateOverlayPlatform{
   flex: 5;
   max-width: 80%;
   overflow: scroll;
 }
-.candidateModalInfo{
-/*  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;*/
-}
+<<<<<<< HEAD
 
 @media (max-width: 768px) {
     .candidateModalInfo {
@@ -330,6 +345,14 @@
       text-align: left;
     }
   }
+
+=======
+.candidateModalInfo{
+/*  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;*/
+}
+>>>>>>> master
 .dropdown-width {
   width: 40vw;
   min-width: 300px;

@@ -1,10 +1,10 @@
 import React from "react";
 // import ProfileOverlay from "./ProfileOverlay.js";
 import "../sass/ProfilesPage.css";
-var data = {"data": {"data.aml": {"profiles": [{"position": "President", "candidates": [{"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}, {"name": "Joe Bruin", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}]}, {"position": "External VP President", "candidates": [{"name": "Joe Bruin Pres VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}, {"name": "Joe Bruin VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United VP", "platform": ["this is one", "this is another", "and here is a third"]}]}], "sanctions": [{"link": "http://features.dailybruin.com/2018/coachella", "time": "04/23/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin"]}, {"link": "http://features.dailybruin.com/2018/coachella", "time": "04/21/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin"]}]}}};
+  var data = {"data": {"data.aml": {"profiles": [{"position": "President", "candidates": [{"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}]}, {"position": "External VP President", "candidates": [{"name": "Joe Bruin Pres VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}, {"name": "Joe Bruin VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United VP", "platform": ["this is one", "this is another", "and here is a third"]}]}], "sanctions": [{"link": "http://features.dailybruin.com/2018/coachella", "time": "04/23/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin", "Joe Bruin Pres"]}, {"link": "http://features.dailybruin.com/2018/coachella", "time": "04/21/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin"]}]}}};
 
 
-class DropDown extends React.Component {
+  class DropDown extends React.Component {
   // static propTypes = {
   //   className: React.PropTypes.string
   // };
@@ -214,11 +214,16 @@ class ProfilePage extends React.Component {
 		// TODO: onclick handler passes in whole candidate
   printCandidates(candidates, offset){
   	const candidateCards = candidates.map(function(candidate, index){
+      let classcandidate = "notEndorsed";
+      if(candidate.endorsed == "Yes" || candidate.endorsed == "yes")
+        classcandidate = "endorsed";
   		let style = {
   			backgroundImage: "url(" + candidate.image + ")",
   		};
+      classcandidate += " circle"
 		return <div className="candidate_card" onClick={(e) => this.openModal(e, offset+index)} key={index} index="{offset+index}">
-			<div className="candidate_image circle" style={style}></div>
+      <div className="break"></div>
+			<div className={classcandidate} style={style}></div>
 			<div className="candidateName">{candidate.name}</div>
 			<div className="candidateSlate">{candidate.slate}</div>
 		</div>
