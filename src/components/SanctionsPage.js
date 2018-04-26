@@ -47,7 +47,7 @@ class SanctionsPage extends React.Component {
     // Group candidates by position
 
     return (
-      <div>
+      <div className="content">
         {/* TODO: Map each sanctions table to a different position */}
         {table}
       </div>

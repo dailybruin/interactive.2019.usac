@@ -23,13 +23,13 @@ import "../sass/ProfilesPage.css";
     this.handleDocumentClick = this.handleDocumentClick.bind(this);
     this.renderSelectionCont = this.renderSelectionCont.bind(this);
   }
-  toggleDropDown(action, e){   
+  toggleDropDown(action, e){
     switch (action){
       case 'close':
         this.setState({
           active: false
         });
-        document.removeEventListener('click', this.handleDocumentClick); 
+        document.removeEventListener('click', this.handleDocumentClick);
         break;
       default:
         this.setState({
@@ -44,12 +44,12 @@ import "../sass/ProfilesPage.css";
     this.toggleDropDown('close');
   }
   handleDocumentClick(){
-    this.toggleDropDown('close');   
+    this.toggleDropDown('close');
   }
   handleOutsideClick(e){
     e.nativeEvent.stopImmediatePropagation();
   }
-  renderSelectionCont(){  
+  renderSelectionCont(){
     if (!this.state.active) return;
 
     return <DropDownItems options={this.props.options} onClick={this.handleSelection} displayField={this.props.displayField} />;
@@ -83,7 +83,7 @@ class DropDownItems extends React.Component {
   }
   render(){
     let options = this.props.options.map((item, idx) => {
-      
+
       return (
         <li className='__item' key={idx} onClick={this.props.onClick.bind(this, item)}>{item.display}</li>
       );
@@ -102,7 +102,7 @@ class ProfileOverlay extends React.Component {
   }
   componentDidMount() {
     document.body.addEventListener('keydown', this.handleKeyDown);
-  }  
+  }
   componentWillUnMount() {
     document.body.removeEventListener('keydown', this.handleKeyDown);
   }
@@ -132,14 +132,14 @@ class ProfileOverlay extends React.Component {
               <div className="candidateModalImageContainer">
 	             <img src={src} className="candidateModalImage"/>
               </div>
-	            <div className="candidateOverlay"> 
+	            <div className="candidateOverlay">
 	            	<div className="candidateOverlayName"> {candidate.name} </div>
 	            	<div className="candidateOverlaySlate"> {candidate.slate} </div>
-	            	<div className="candidateOverlayPlatform">{candidate.platform}</div> 
+	            	<div className="candidateOverlayPlatform">{candidate.platform}</div>
 	            </div>
 	        </div>
           </div>
-          
+
         </div>
       </div>
     )
@@ -256,11 +256,11 @@ class ProfilePage extends React.Component {
       </div>
         {this.printPositions()}
         <ProfileOverlay
-          closeModal={this.closeModal} 
-          findPrev={this.findPrev} 
-          findNext={this.findNext} 
-          hasPrev={this.state.currentIndex > 0} 
-          hasNext={this.state.currentIndex + 1 < this.candidatesAll.length} 
+          closeModal={this.closeModal}
+          findPrev={this.findPrev}
+          findNext={this.findNext}
+          hasPrev={this.state.currentIndex > 0}
+          hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
           src={this.images[this.state.currentIndex]}
           candidate={this.candidatesAll[this.state.currentIndex]}
         />

@@ -13,12 +13,23 @@ class SanctionsEntry extends React.Component {
     this.state = {
       active: false
     };
+
+    this.toggleList = this.toggleList.bind(this);
+  }
+
+  toggleList(e) {
+    const current = this.state.active;
+    this.setState({ active: !current });
   }
 
   render() {
-    return(
-      <div className="sanctions-entry">
-        <div className="entry-header">
+    return (
+      <div
+        className={
+          this.state.active ? "sanctions-entry active" : "sanctions-entry"
+        }
+      >
+        <div onClick={this.toggleList} className="entry-header">
           <div className="photo">
             <img src={this.props.image} />
           </div>

@@ -68,7 +68,7 @@ class SanctionsTable extends React.Component {
     return (
       // TODO: Map each candidate within the position + their sanctions
       <div>
-        <h2>{this.props.positionData.position}</h2>
+        <h2>{this.props.positionData.position.toUpperCase()}</h2>
         {tableSections}
       </div>
     );

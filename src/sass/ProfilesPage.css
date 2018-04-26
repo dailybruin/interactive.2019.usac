@@ -181,7 +181,7 @@
     .candidateOverlay{
       display: block;
       text-align: center;
-    
+
     }
 }*/
 .modal img {
@@ -251,13 +251,13 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  
+
 }
 
 
 .candidateModalImageContainer{
   flex: 1;
-  max-width: 33%; 
+  max-width: 33%;
 
 }
 
@@ -327,7 +327,7 @@
       flex-direction: column;
       justify-content: center;
     }
-    
+
     .candidateModalImageContainer {
       max-width: 100%;
     }
