@@ -1,16 +1,14 @@
-.candidate_image {
+.endorsed_image {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 10px;
   font-weight: 100;
-/*  font-family: "Segoe UI";
-  letter-spacing: 1px;*/
 }
-.candidate_image:before {
+.endorsed:before {
   border-radius: 200px;
-  border: 3px solid #468cdc;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;
+  border: 3px solid #06ce00;
+  /*box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;*/
   content: "";
   display: block;
   position: absolute;
@@ -24,17 +22,19 @@
   transform: scale(1);
   transition: all 300ms;
 }
-.candidate_image:hover:before {
+.endorsed:hover:before {
   transform: scale(1.05);
 }
-.candidate_image.circle {
-/*  background-image: url(https://www.w3schools.com/images/w3schools_green.jpg);*/
+.break{
+  height:15px;
+}
+.endorsed.circle {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 50%;
   border: none;
-  color: #e4ecfa;
+  /*color: #e4ecfa;*/
   cursor: pointer;
   display: block;
   width: 200px;
@@ -45,7 +45,57 @@
   margin-top: 25px;
   transition: 0.5s;
 }
-.candidate_image.circle:hover {
+.endorsed.circle:hover {
+  padding: -2px;
+}
+
+.notEndorsed {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 100;
+/*  font-family: "Segoe UI";
+  letter-spacing: 1px;*/
+}
+.notEndorsed:before {
+  border-radius: 200px;
+  border: 1px solid #468cdc;
+  /*box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;*/
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 230px;
+  width: 230px;
+  margin-left: -116px;
+  margin-top: -116px;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+.notEndorsed:hover:before {
+  transform: scale(1.05);
+}
+.notEndorsed.circle {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  border: none;
+  /*color: #e4ecfa;*/
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+.notEndorsed.circle:hover {
   padding: -2px;
 }
 .candidate_card{
@@ -78,16 +128,16 @@
   font-weight: bold;
 }
 .candidateName{
-  padding-top: 20px;
+  padding-top: 30px;
   padding-left: 10px;
   font-family: 'Overpass Mono', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 /*  text-align: center;*/
 }
 .candidateSlate{
   font-family: 'Overpass Mono', sans-serif;
-  font-size: 12px;
+  font-size: 18px;
   padding-left: 12px;
   color: gray;
   /*text-align: center;*/
@@ -190,15 +240,44 @@
   position: relative;
 }
 .candidateOverlay{
-  display: inline-block;
   vertical-align: top;
-/*  float: left;*/
+  display:inline-block;
+
+}
+@media only screen and (max-device-width: 700px){
+  .candidateOverlay{
+    display:block;
+  }
+  .candidateModalInfo{
+    justify-content: center;
+  }
+  .candidateName{
+    text-align: center;
+    font-size: 40px;
+  }
+  .candidateSlate{
+    text-align: center;
+    font-size:35px;
+  }
+  .candidateOverlayPlatform{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:100px;
+  }
+  .modal img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .candidateOverlayPlatform{
   padding-top: 15px;
   padding-left: 12px;
 }
-
+.candidateModalInfo{
+/*  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;*/
+}
 .dropdown-width {
   width: 40vw;
   min-width: 300px;
