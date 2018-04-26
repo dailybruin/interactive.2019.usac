@@ -312,6 +312,16 @@
   flex-wrap: wrap;*/
 }
 
+.candidateOverlayName {
+  font-weight:  bold;
+  font-size:  25px;
+  border-bottom: 1px solid grey;
+}
+
+.candidateOverlaySlate {
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
     .candidateModalInfo {
       flex-direction: column;
