@@ -93,9 +93,7 @@
   /*text-align: center;*/
 }
 
-.candidatemodalinfo{
-  display:inline-block;
-}
+
 .modal {
   position: fixed;
   z-index: 999;
@@ -121,6 +119,12 @@
 @media (min-width: 60em) {
   .modal {
     width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    min-width: 0;
   }
 }
 /*@media only screen and (max-width: 500px) {
@@ -188,16 +192,77 @@
 
 .modal-body {
   position: relative;
+  font-family: 'Overpass Mono', sans-serif;
 }
+
+/* Overlay styling */
+
+.candidateModalInfo{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  
+}
+
+
+.candidateModalImageContainer{
+  flex: 1;
+  max-width: 33%; 
+
+}
+
+
+
+
+.candidateModalImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .candidateOverlay{
-  display: inline-block;
-  vertical-align: top;
-/*  float: left;*/
+  flex-direction: column;
+  flex: 1;
 }
+
+.candidateOverlayName {
+  font-size: 30px;
+  font-weight: bold;
+  flex: 1;
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
+.candidateOverlaySlate {
+  flex: 1;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
 .candidateOverlayPlatform{
-  padding-top: 15px;
-  padding-left: 12px;
+  flex: 5;
+  max-width: 80%;
+  overflow: scroll;
 }
+
+@media (max-width: 768px) {
+    .candidateModalInfo {
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .candidateModalImageContainer {
+      max-width: 100%;
+    }
+
+    .candidateOverlay {
+      text-align: center;
+    }
+
+    .candidateOverlayPlatform{
+      text-align: left;
+    }
+  }
 
 .dropdown-width {
   width: 40vw;

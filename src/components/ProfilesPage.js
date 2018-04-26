@@ -129,10 +129,12 @@ class ProfileOverlay extends React.Component {
             {hasPrev && <a href="#" className='modal-prev' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
             {hasNext && <a href="#" className='modal-next' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
             <div className="candidateModalInfo">
-	            <img src={src} />
+              <div className="candidateModalImageContainer">
+	             <img src={src} className="candidateModalImage"/>
+              </div>
 	            <div className="candidateOverlay"> 
-	            	<div className="candidateName"> {candidate.name} </div>
-	            	<div className="candidateSlate"> {candidate.slate} </div>
+	            	<div className="candidateOverlayName"> {candidate.name} </div>
+	            	<div className="candidateOverlaySlate"> {candidate.slate} </div>
 	            	<div className="candidateOverlayPlatform">{candidate.platform}</div> 
 	            </div>
 	        </div>
