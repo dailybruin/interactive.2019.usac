@@ -1,0 +1,55 @@
+.sanctions-entry {
+  background-color: white;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.32);
+  transition: all 0.3s ease;
+  z-index: 1;
+  margin: 2px;
+}
+
+.sanctions-entry:hover {
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.32);
+  z-index: 10;
+}
+
+.entry-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+
+  .photo {
+    height: 2.5em;
+    width: 2.5em;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid green;
+    margin: 0px 10px 0px 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .score {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 0 2px 0 2px;
+    border: 3px solid black;
+    margin-left: auto;
+  }
+
+  .name {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .slate {
+    font-family: 'Overpass Mono', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(83, 83, 83);
+  }
+
+}

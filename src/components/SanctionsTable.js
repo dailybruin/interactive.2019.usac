@@ -1,7 +1,7 @@
 import React from "react";
 import SanctionsEntry from "./SanctionsEntry";
 import { Accordion, AccordionItem } from "react-sanfona";
-
+import "../sass/sanctions.scss";
 class SanctionsTable extends React.Component {
   constructor(props) {
     super(props);
@@ -45,10 +45,10 @@ class SanctionsTable extends React.Component {
     // Now we want to sort the candidate data array
     candidateData.sort((a, b) => {
       if (a.sanctionCount < b.sanctionCount) {
-        return -1;
+        return 1;
       }
       if (a.sanctionCount > b.sanctionCount) {
-        return 1;
+        return -1;
       }
       return 0;
     });
