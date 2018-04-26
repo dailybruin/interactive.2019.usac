@@ -1,5 +1,4 @@
 import React from "react";
-
 /*
 key={c.name}
 name={c.name}
@@ -23,6 +22,16 @@ class SanctionsEntry extends React.Component {
   }
 
   render() {
+    let list = this.props.list.map(sanctions => {
+      return (
+        <div className="sanction-list-entry">
+          <div className="entry-title">{sanctions.title}</div>
+          <div className="entry-time">{sanctions.time}</div>
+          <hr />
+        </div>
+      );
+    });
+
     return (
       <div
         className={
@@ -39,8 +48,7 @@ class SanctionsEntry extends React.Component {
           </div>
           <div className="score">{this.props.count}</div>
         </div>
-        <div className="entry-body">
-        </div>
+        <div className="entry-body">{list}</div>
       </div>
     )
   }

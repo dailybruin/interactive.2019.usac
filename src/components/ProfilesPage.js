@@ -157,7 +157,7 @@ class ProfilePage extends React.Component {
     	// candidates: JSON.parse(xmlHttp.responseText)['data']['data.aml']['profiles'],
     	candidates: data['data']['data.aml']['profiles'],
     	currentIndex: null,
-    	displayValue: 'All'
+      displayValue: 'All',
     }
     // this.ca = [];
     var dropdownOptions = [{display: 'All', value: 0}]
@@ -174,7 +174,7 @@ class ProfilePage extends React.Component {
     })
     this.images = images;
     this.candidatesAll = candidates;
-    this.dropdownOptions = dropdownOptions
+    this.dropdownOptions = dropdownOptions;
     this.closeModal = this.closeModal.bind(this);
     this.findNext = this.findNext.bind(this);
     this.findPrev = this.findPrev.bind(this);
@@ -244,7 +244,6 @@ class ProfilePage extends React.Component {
 		  			</div>
 		  		</div>
 	  }, this);
-
   	return positions;
   }
 
