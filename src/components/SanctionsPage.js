@@ -1,5 +1,7 @@
 import React from "React";
 import SanctionsTable from "./SanctionsTable";
+import SanctionsRecent from "./SanctionsRecent";
+import "../sass/sanctions.scss";
 class SanctionsPage extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +50,8 @@ class SanctionsPage extends React.Component {
 
     return (
       <div className="content">
+        <h2>RECENT SANCTIONS</h2>
+        <SanctionsRecent sanctions={this.state.sanctionData} />
         {/* TODO: Map each sanctions table to a different position */}
         {table}
       </div>

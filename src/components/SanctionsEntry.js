@@ -1,4 +1,6 @@
 import React from "react";
+import { SlideDown } from "react-slidedown";
+import "react-slidedown/lib/slidedown.css";
 /*
 key={c.name}
 name={c.name}
@@ -25,8 +27,10 @@ class SanctionsEntry extends React.Component {
     let list = this.props.list.map(sanctions => {
       return (
         <div className="sanction-list-entry">
-          <div className="entry-title">{sanctions.title}</div>
-          <div className="entry-time">{sanctions.time}</div>
+          <a href={sanctions.link} target="_blank">
+            <div className="entry-title">{sanctions.title}</div>
+            <div className="entry-time">{sanctions.time}</div>
+          </a>
           <hr />
         </div>
       );
@@ -48,9 +52,11 @@ class SanctionsEntry extends React.Component {
           </div>
           <div className="score">{this.props.count}</div>
         </div>
-        <div className="entry-body">{list}</div>
+        <div className="entry-body">
+          <SlideDown>{this.state.active ? list : null}</SlideDown>
+        </div>
       </div>
-    )
+    );
   }
 }
 
