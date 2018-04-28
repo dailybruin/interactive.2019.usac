@@ -4,6 +4,7 @@ import EndorsementsPage from "./EndorsementsPage";
 import ResultsPage from "./ResultsPage";
 import SanctionsPage from "./SanctionsPage";
 import ProfilePage from "./ProfilesPage";
+import RelatedStories from "./RelatedStories";
 
 
 class Main extends React.Component {
@@ -11,10 +12,11 @@ class Main extends React.Component {
     return (
       <div className="content">
         <Switch>
-          <Route exact path='/candidates' component={ProfilePage}/>
-          <Route path='/endorsements' component={EndorsementsPage}/>
-          <Route path='/results' component={ResultsPage}/>
-          <Route path='/violations' component={SanctionsPage}/>
+          <Route exact path="/candidates" component={ProfilePage} />
+          <Route path="/endorsements" component={EndorsementsPage} />
+          <Route path="/results" component={ResultsPage} />
+          <Route path="/violations" component={SanctionsPage} />
+          <Route path="/related" component={RelatedStories} />
         </Switch>
       </div>
     );
