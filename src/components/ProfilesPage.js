@@ -1329,11 +1329,11 @@ class ProfilePage extends React.Component {
   }
 
   getInfo() {
-    fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/")
-    .then(res => res.json())
-    .then(data => {
-      dataInfo = data;
-    });
+    // fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/")
+    // .then(res => res.json())
+    // .then(data => {
+    //   dataInfo = data;
+    // });
     this.setState({loaded: true});
   }
 
