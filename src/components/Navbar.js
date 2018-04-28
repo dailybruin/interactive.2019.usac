@@ -24,6 +24,10 @@ const navItems = {
       {
         name: "RESULTS",
         link: "/results"
+      },
+      {
+        name: "RELATED",
+        link: "/related"
       }
     ]
   }
