@@ -1,8 +1,8 @@
 import React from "react";
 // import ProfileOverlay from "./ProfileOverlay.js";
-import "../sass/ProfilesPage.css";
-  var data = {"data": {"data.aml": {"profiles": [{"position": "President", "candidates": [{"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}]}, {"position": "External VP President", "candidates": [{"name": "Joe Bruin Pres VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}, {"name": "Joe Bruin VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United VP", "platform": ["this is one", "this is another", "and here is a third"]}]}], "sanctions": [{"link": "http://features.dailybruin.com/2018/coachella", "time": "04/23/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin", "Joe Bruin Pres"]}, {"link": "http://features.dailybruin.com/2018/coachella", "time": "04/21/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin"]}]}}};
+import "../sass/ProfilesPage.scss";
 
+  var dataInfo = {"data": {"data.aml": {"profiles": [{"position": "President", "candidates": [{"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin Pres", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "endorsed": "Yes", "platform": ["this is one", "this is another", "and here is a third"], "endorsement_text": "This is why"}, {"name": "Joe Bruin", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}]}, {"position": "External VP President", "candidates": [{"name": "Joe Bruin Pres VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United", "platform": ["this is one", "this is another", "and here is a third"]}, {"name": "Joe Bruin VP", "image": "https://www.w3schools.com/images/w3schools_green.jpg", "slate": "Bruins United VP", "platform": ["this is one", "this is another", "and here is a third"]}]}], "sanctions": [{"link": "http://features.dailybruin.com/2018/coachella", "time": "04/23/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin", "Joe Bruin Pres"]}, {"link": "http://features.dailybruin.com/2018/coachella", "time": "04/21/18 2:32PM", "title": "Didn\u2019t put a sticker on laptop", "recipients": ["Joe Bruin"]}]}}};
 
   class DropDown extends React.Component {
   // static propTypes = {
@@ -23,6 +23,7 @@ import "../sass/ProfilesPage.css";
     this.handleDocumentClick = this.handleDocumentClick.bind(this);
     this.renderSelectionCont = this.renderSelectionCont.bind(this);
   }
+
   toggleDropDown(action, e){
     switch (action){
       case 'close':
@@ -102,6 +103,7 @@ class ProfileOverlay extends React.Component {
   }
   componentDidMount() {
     document.body.addEventListener('keydown', this.handleKeyDown);
+    console.log("loaded");
   }
   componentWillUnMount() {
     document.body.removeEventListener('keydown', this.handleKeyDown);
@@ -120,6 +122,11 @@ class ProfileOverlay extends React.Component {
       console.log('whut')
       return null;
     }
+    let bulletedPlatforms = candidate.platform.map(bullet => {
+      return(
+        <li>{bullet}</li>
+      );
+    })
     return (
       <div id="mount">
         <div className="modal-overlay" onClick={closeModal}></div>
@@ -134,8 +141,8 @@ class ProfileOverlay extends React.Component {
               </div>
 	            <div className="candidateOverlay">
 	            	<div className="candidateOverlayName"> {candidate.name} </div>
-	            	<div className="candidateOverlaySlate"> {candidate.slate} </div>
-	            	<div className="candidateOverlayPlatform">{candidate.platform}</div>
+	            	<div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
+	            	<div className="candidateOverlayPlatform"><ul>{bulletedPlatforms}</ul></div>
 	            </div>
 	        </div>
           </div>
@@ -155,17 +162,18 @@ class ProfilePage extends React.Component {
 
     this.state = {
     	// candidates: JSON.parse(xmlHttp.responseText)['data']['data.aml']['profiles'],
-    	candidates: data['data']['data.aml']['profiles'],
+    	candidates: dataInfo['data']['data.aml']['profiles'],
     	currentIndex: null,
-      displayValue: 'All',
+      displayValue: 'ALL',
+      loaded: false
     }
     // this.ca = [];
-    var dropdownOptions = [{display: 'All', value: 0}]
+    var dropdownOptions = [{display: 'ALL', value: 0}]
     var candidates = [];
     var images = [];
     this.handleSelection = this.handleSelection.bind(this);
     this.state.candidates.forEach(function(position, index){
-    	dropdownOptions.push({display: position.position, value: index + 1});
+    	dropdownOptions.push({display: position.position.toUpperCase(), value: index + 1});
     	position.candidates.forEach(function(candidate){
     		candidate.position = position;
     		candidates.push(candidate);
@@ -180,6 +188,20 @@ class ProfilePage extends React.Component {
     this.findPrev = this.findPrev.bind(this);
     // this.renderImageContent = this.renderImageContent.bind(this);
   }
+
+  getInfo() {
+    fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/")
+    .then(res => res.json())
+    .then(data => {
+      dataInfo = data;
+    });
+    this.setState({loaded: true});
+  }
+
+  componentDidMount() {
+    this.getInfo();
+  }
+
   handleSelection(item){
     this.setState({
       displayValue: item.display
@@ -222,10 +244,11 @@ class ProfilePage extends React.Component {
   		};
       classcandidate += " circle"
 		return <div className="candidate_card" onClick={(e) => this.openModal(e, offset+index)} key={index} index="{offset+index}">
-      <div className="break"></div>
 			<div className={classcandidate} style={style}></div>
-			<div className="candidateName">{candidate.name}</div>
-			<div className="candidateSlate">{candidate.slate}</div>
+      <div className="candidate-info">
+        <div className="candidateName">{candidate.name}</div>
+        <div className="candidateSlate">{candidate.slate.toUpperCase()}</div>
+      </div>
 		</div>
 	}, this);
 	return candidateCards;
@@ -234,7 +257,7 @@ class ProfilePage extends React.Component {
   	let index = 0;
   	const positions = this.state.candidates.map(function(positionInfo, i){
   		index += positionInfo.candidates.length;
-  		if (this.state.displayValue == positionInfo.position || this.state.displayValue == "All")
+  		if (this.state.displayValue == positionInfo.position.toUpperCase() || this.state.displayValue == "ALL")
 	  		return <div className="positionRow" key={i}>
 		  			<div className="positionName">
 		  				{positionInfo.position}
@@ -248,23 +271,28 @@ class ProfilePage extends React.Component {
   }
 
   render() {
-    return(
-      <div>
-      	<div className='dropdown-width'>
-        <DropDown options={this.dropdownOptions} value={this.state.displayValue} onClick={this.handleSelection} />
-      </div>
-        {this.printPositions()}
-        <ProfileOverlay
-          closeModal={this.closeModal}
-          findPrev={this.findPrev}
-          findNext={this.findNext}
-          hasPrev={this.state.currentIndex > 0}
-          hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
-          src={this.images[this.state.currentIndex]}
-          candidate={this.candidatesAll[this.state.currentIndex]}
-        />
-      </div>
-    );
+    if(this.state.loaded) {
+      return(
+        <div>
+          <div className='dropdown-width'>
+          <DropDown options={this.dropdownOptions} value={this.state.displayValue} onClick={this.handleSelection} />
+        </div>
+          {this.printPositions()}
+          <ProfileOverlay
+            closeModal={this.closeModal}
+            findPrev={this.findPrev}
+            findNext={this.findNext}
+            hasPrev={this.state.currentIndex > 0}
+            hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
+            src={this.images[this.state.currentIndex]}
+            candidate={this.candidatesAll[this.state.currentIndex]}
+          />
+        </div>
+      );
+    }
+    else  {
+      return <div>Loading...</div>;
+    }
   }
 }
 

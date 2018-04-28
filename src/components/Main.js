@@ -5,10 +5,11 @@ import ResultsPage from "./ResultsPage";
 import SanctionsPage from "./SanctionsPage";
 import ProfilePage from "./ProfilesPage";
 
+
 class Main extends React.Component {
   render() {
     return (
-      <div>
+      <div className="content">
         <Switch>
           <Route exact path='/candidates' component={ProfilePage}/>
           <Route path='/endorsements' component={EndorsementsPage}/>

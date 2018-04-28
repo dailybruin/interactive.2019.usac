@@ -6,10 +6,18 @@ class SanctionsRecent extends React.Component {
   }
 
   render() {
-    let firstThree = this.props.sanctions.slice(0, 3);
+    let firstThree = this.props.sanctions.reverse().slice(0, 3);
     let count = 0;
     const recents = firstThree.map(sanction => {
-      return <div>{sanction.link}</div>;
+      return (
+        <div className="sanction-list-entry">
+          <a href={sanction.link} target="_blank">
+            <div className="entry-title">{sanction.title}</div>
+            <div className="entry-time">{sanction.time}</div>
+          </a>
+          <hr />
+        </div>
+      );
     });
 
     return <div>{recents}</div>;

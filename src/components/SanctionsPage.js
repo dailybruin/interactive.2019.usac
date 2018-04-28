@@ -18,10 +18,6 @@ class SanctionsPage extends React.Component {
         const sanctions = data.data["data.aml"].sanctions;
         const candidateData = data.data["data.aml"].profiles;
         this.setState({ sanctionData: sanctions, candidates: candidateData });
-        // candidateData.map(position => {
-        //   console.log(position);
-        //   this.setState({ post_data: data, candidates: position });
-        // });
       });
   }
 
@@ -47,12 +43,10 @@ class SanctionsPage extends React.Component {
       );
     });
     // Group candidates by position
-
     return (
-      <div className="content">
+      <div>
         <h2>RECENT SANCTIONS</h2>
         <SanctionsRecent sanctions={this.state.sanctionData} />
-        {/* TODO: Map each sanctions table to a different position */}
         {table}
       </div>
     );
