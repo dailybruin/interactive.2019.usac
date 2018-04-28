@@ -37,7 +37,7 @@ class RelatedStories extends React.Component {
         );
       })
     ) : (
-      <p>Loading</p>
+      <h2>Loading</h2>
     );
 
     return (

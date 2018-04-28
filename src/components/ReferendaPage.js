@@ -26,7 +26,7 @@ class ReferendaPage extends React.Component {
 
   render() {
     if (!this.state.referenda) {
-      return <div>Loading...</div>;
+      return <div><h2>Loading...</h2></div>;
     }
 
     const cards = this.state.referenda.map((ref, i) => {

@@ -108,7 +108,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "John Gordon",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Independent",
               "endorsed": "No",
               "platform": [
@@ -247,7 +247,7 @@ import "../sass/ProfilesPage.scss";
           "candidates": [
             {
               "name": "Salvador Martinez",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -438,7 +438,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Berenise Arriaga",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -492,7 +492,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Bella Martin",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Bruins United",
               "endorsed": "No",
               "platform": [
@@ -831,7 +831,7 @@ import "../sass/ProfilesPage.scss";
           "candidates": [
             {
               "name": "Giovanny Machado",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -891,7 +891,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Justin Suarez",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Independent",
               "endorsed": "No",
               "platform": [
@@ -954,7 +954,7 @@ import "../sass/ProfilesPage.scss";
           "candidates": [
             {
               "name": "William Hickman",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -985,7 +985,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Jessica Kim",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Bruins United",
               "endorsed": "No",
               "platform": [
@@ -1430,7 +1430,7 @@ class ProfilePage extends React.Component {
       );
     }
     else  {
-      return <div>Loading...</div>;
+      return <div><h2>Loading...</h2></div>;
     }
   }
 }
