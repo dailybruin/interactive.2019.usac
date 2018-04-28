@@ -1,7 +1,6 @@
 import React from "react";
 import SanctionsEntry from "./SanctionsEntry";
 import { Accordion, AccordionItem } from "react-sanfona";
-
 class SanctionsTable extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +13,7 @@ class SanctionsTable extends React.Component {
     for (let i = 0; i < sanctionData.length; i++) {
       let sanctionTransform = sanctionData[i];
       for (let j = 0; j < sanctionData[i].recipients.length; j++) {
-        let newAdd = sanctionTransform;
+        let newAdd = JSON.parse(JSON.stringify(sanctionTransform));
         // Recipients is now a value!
         newAdd.recipientFlat = sanctionData[i].recipients[j];
         flatSanctions.push(newAdd);
@@ -23,7 +22,8 @@ class SanctionsTable extends React.Component {
     }
     // We now have a flat array listing all sanctions - we can associate these with the candidates
 
-    console.log(sanctionData);
+    console.log("flat array");
+    console.log(flatSanctions);
     // Now we want to cycle through the candidates and count their sanctions
     let candidateData = this.props.candidateData;
     for (let i = 0; i < candidateData.length; i++) {
@@ -45,10 +45,10 @@ class SanctionsTable extends React.Component {
     // Now we want to sort the candidate data array
     candidateData.sort((a, b) => {
       if (a.sanctionCount < b.sanctionCount) {
-        return -1;
+        return 1;
       }
       if (a.sanctionCount > b.sanctionCount) {
-        return 1;
+        return -1;
       }
       return 0;
     });
@@ -68,7 +68,7 @@ class SanctionsTable extends React.Component {
     return (
       // TODO: Map each candidate within the position + their sanctions
       <div>
-        <h2>{this.props.positionData.position}</h2>
+        <h2>{this.props.positionData.position.toUpperCase()}</h2>
         {tableSections}
       </div>
     );

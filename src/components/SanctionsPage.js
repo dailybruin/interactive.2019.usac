@@ -1,11 +1,13 @@
 import React from "React";
 import SanctionsTable from "./SanctionsTable";
+import SanctionsRecent from "./SanctionsRecent";
+import "../sass/sanctions.scss";
 class SanctionsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sanctionData: 1,
-      candidates: null
+      candidates: null,
     };
   }
 
@@ -15,11 +17,20 @@ class SanctionsPage extends React.Component {
       .then(data => {
         const sanctions = data.data["data.aml"].sanctions;
         const candidateData = data.data["data.aml"].profiles;
+        const images = data.images.s3;
+        candidateData.map(candidate => {
+          candidate.candidates.map(indv => {
+            if (indv.image) {
+              const img = images[indv.image];
+              if (img) {
+                indv.image = img.url;
+              }
+            }
+          });
+        });
+        //Get images from Kerckhoff
+        console.log(candidateData);
         this.setState({ sanctionData: sanctions, candidates: candidateData });
-        // candidateData.map(position => {
-        //   console.log(position);
-        //   this.setState({ post_data: data, candidates: position });
-        // });
       });
   }
 
@@ -45,10 +56,10 @@ class SanctionsPage extends React.Component {
       );
     });
     // Group candidates by position
-
     return (
       <div>
-        {/* TODO: Map each sanctions table to a different position */}
+        <h2>RECENT SANCTIONS</h2>
+        <SanctionsRecent sanctions={this.state.sanctionData} />
         {table}
       </div>
     );
