@@ -10,6 +10,10 @@ const navItems = {
         link: "/candidates"
       },
       {
+        name: "REFERENDA",
+        link: "/referenda"
+      },
+      {
         name: "VIOLATIONS",
         link: "/violations"
       },
