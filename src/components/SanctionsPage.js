@@ -7,7 +7,7 @@ class SanctionsPage extends React.Component {
     super(props);
     this.state = {
       sanctionData: 1,
-      candidates: null
+      candidates: null,
     };
   }
 
@@ -17,6 +17,19 @@ class SanctionsPage extends React.Component {
       .then(data => {
         const sanctions = data.data["data.aml"].sanctions;
         const candidateData = data.data["data.aml"].profiles;
+        const images = data.images.s3;
+        candidateData.map(candidate => {
+          candidate.candidates.map(indv => {
+            if (indv.image) {
+              const img = images[indv.image];
+              if (img) {
+                indv.image = img.url;
+              }
+            }
+          });
+        });
+        //Get images from Kerckhoff
+        console.log(candidateData);
         this.setState({ sanctionData: sanctions, candidates: candidateData });
       });
   }
