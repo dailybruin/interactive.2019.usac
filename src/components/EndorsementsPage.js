@@ -80,7 +80,7 @@ class EndorsementsPage extends React.Component {
       					// save candidates info for the position in object state only if the candidate is endorsed
       					endorsedCandidates[pos.position] = candidate;
       				}
-      				else 
+      				else
       				{
 
       					//console.log("Candidate Not Endorsed: " + candidate.name)
@@ -162,18 +162,18 @@ class EndorsementsPage extends React.Component {
 
   render() {
   	if(this.state.loaded) {
-  		return <div> <div className="positionRow" key={0}> {this.printCandidates()} 
+  		return <div> <div className="positionRow" key={0}><div className="positionCandidates"> {this.printCandidates()} </div>
   					</div>
-  					<ProfileOverlay 
+  					<ProfileOverlay
 	  					closeModal = {this.closeModal}
 	  					findPrev = {this.findPrev}
 	  					findNext={this.findNext}
 	            		hasPrev={this.state.currentIndex > 0}
-	            		hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length} 
+	            		hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
 	            		src={this.images[this.state.currentIndex]}
 	            		candidate={this.endorsedCandidates[this.state.currentIndex]} />
 	            </div>
-  		
+
   	}
   	else
   	{
