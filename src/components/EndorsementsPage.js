@@ -86,12 +86,13 @@ class EndorsementsPage extends React.Component {
       					//console.log("Candidate Not Endorsed: " + candidate.name)
       				}*/
 
-      				//TODO: Move this code inside the if statement
+      				//TODO: Move this code inside the if statement and uncomment the if statement
       				index += 1;
       				candidate.position = pos.position;
       				candidate.index = index;
-      				endorsedCandidates.push(candidate); // TODO: Change to be based on candidate["endorsed"]
-      				images.push(candidate.image);
+      				endorsedCandidates.push(candidate); 
+      				images.push(data.images.s3[candidate.image]['url']);
+              candidate.image = data.images.s3[candidate.image]['url']
       			})
       		});
       		this.images = images;
@@ -139,13 +140,13 @@ class EndorsementsPage extends React.Component {
   printCandidates() {
   	var index = 0;
   	const candidateCards = this.endorsedCandidates.map( (candidate) => {
-  		//console.log(candidate);
+  		console.log(candidate);
   		let classcandidate = "endorsed circle";
   		let style = {
   			backgroundImage: "url(" + candidate.image + ")",
   		}
   		return <div className="candidate_card" onClick={(e) => this.openModal(e, candidate.index)} key={candidate.index} index="{offset+index}">
-					<div className="positionName">
+					<div className="endorsedPositionName">
 						{candidate.position}
 					</div>
 
