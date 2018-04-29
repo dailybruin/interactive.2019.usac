@@ -851,10 +851,8 @@ import "../sass/ProfilesPage.scss";
               "platform": [
                 "Work-Study Partnerships in Professional Fields: Expand work-study awards to internships so students are paid to work in their fields of interest.",
                 "UCLA Transportation for Commuters: Add more stops for the BruinBus on the Expo Line to ease commuting issues for students.",
-                "Curriculum Uncovered: Collaborate with cultural and professional organizations to develop a series of workshops that address vocational skills and other aspects of career development.",
-                "Plastic is Cheap: Push for the BruinCard Office to abandon its fixed replacement fee and instead adopt an incremental one, starting at $10 and capping off at $25.",
-                "Money Moves: Put pressure on the University to return nonrefundable deposits and fees to students when there is no guarantee a service will be provided, such as the study abroad deposit.",
-                "Action for Access: Develop a coalition of student leaders to advocate for the affordability and funding of higher education through phone banking, town halls and grassroots organizing."
+                "YELP for UCLA Apartments: Revamp off-campus housing application to include reviews of buildings, grading system for management, tenant rights, frequently asked questions and a messenger application for tenants in crisis.",
+                "Discounted Computer Repair for Students: Discount computer repair and computer loaner program for students in need."
               ],
               "endorsement_text": "This is why",
               "sanctionList": [
@@ -885,7 +883,10 @@ import "../sass/ProfilesPage.scss";
               "platform": [
                 "Attire for Hire: Create a scholarship to subsidize the cost of professional clothing and shoes for students in need.",
                 "Books for Bruins: Secure funds to alleviate the cost of textbooks and graduate school exam prep books.",
-                "You Are Not a-Loan: Organize regular personal finance and life management skills workshops."
+                "Curriculum Uncovered: Collaborate with cultural and professional organizations to develop a series of workshops that address vocational skills and other aspects of career development.",
+                "Plastic is Cheap: Push for the BruinCard Office to abandon its fixed replacement fee and instead adopt an incremental one, starting at $10 and capping off at $25.",
+                "Money Moves: Put pressure on the University to return nonrefundable deposits and fees to students when there is no guarantee a service will be provided, such as the study abroad deposit.",
+                "Action for Access: Develop a coalition of student leaders to advocate for the affordability and funding of higher education through phone banking, town halls and grassroots organizing."
               ],
               "endorsement_text": "This is why",
               "sanctionList": [

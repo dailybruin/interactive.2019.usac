@@ -29,6 +29,7 @@ class SanctionsPage extends React.Component {
           });
         });
         //Get images from Kerckhoff
+        console.log("candidates");
         console.log(candidateData);
         this.setState({ sanctionData: sanctions, candidates: candidateData });
       });

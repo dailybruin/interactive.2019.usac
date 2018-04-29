@@ -42,7 +42,7 @@ class SanctionsTable extends React.Component {
       candidateData[i].sanctionCount = number;
     }
 
-    // Now we want to sort the candidate data array
+    //Now we want to sort the candidate data array
     candidateData.sort((a, b) => {
       if (a.sanctionCount < b.sanctionCount) {
         return 1;
