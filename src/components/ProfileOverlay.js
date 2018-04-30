@@ -80,32 +80,3 @@ class ProfileOverlay extends React.Component {
 }
 
 export default ProfileOverlay;
-
-
-/*
-
-    return (
-      <div id="mount">
-        <div className="modal-overlay" onClick={closeModal}></div>
-        <div isopen={(!!src).toString()} className="modal">
-          <div className='modal-body'>
-            <a href="#" className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
-            {hasPrev && <a href="#" className='modal-prev arrow' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
-            {hasNext && <a href="#" className='modal-next arrow' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
-            <div className="candidateModalInfo">
-              <div className="candidateModalImageContainer">
-	             <img src={src} className="candidateModalImage"/>
-              </div>
-	            <div className="candidateOverlay">
-	            	<div className="candidateOverlayName"> {candidate.name} </div>
-	            	<div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
-	            	{this.getAppropriatePlatformText(pageType)}
-	            </div>
-	        </div>
-          </div>
-
-        </div>
-      </div>
-    )
-
-*/
