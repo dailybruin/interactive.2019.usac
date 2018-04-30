@@ -1,6 +1,8 @@
 import React from "react";
 import ReferendumCard from "./ReferendumCard";
+import ProfileOverlay from "./ProfileOverlay";
 
+/*
 class ProfileOverlay extends React.Component {
   constructor() {
     super();
@@ -55,6 +57,7 @@ class ProfileOverlay extends React.Component {
     )
   }
 }
+*/
 
 class EndorsementsPage extends React.Component {
   constructor(props) {
@@ -172,7 +175,8 @@ class EndorsementsPage extends React.Component {
 	            		hasPrev={this.state.currentIndex > 0}
 	            		hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
 	            		src={this.images[this.state.currentIndex]}
-	            		candidate={this.endorsedCandidates[this.state.currentIndex]} />
+	            		candidate={this.endorsedCandidates[this.state.currentIndex]}
+                  pageType="endorsements" />
 	            </div>
 
   	}

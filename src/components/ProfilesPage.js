@@ -1,5 +1,5 @@
 import React from "react";
-// import ProfileOverlay from "./ProfileOverlay.js";
+import ProfileOverlay from "./ProfileOverlay.js";
 import "../sass/ProfilesPage.scss";
   var dataInfo = {"data": {
     "data.aml": {
@@ -1236,6 +1236,8 @@ class DropDownItems extends React.Component {
     );
   }
 }
+
+/*
 class ProfileOverlay extends React.Component {
   constructor() {
     super();
@@ -1292,6 +1294,7 @@ class ProfileOverlay extends React.Component {
     )
   }
 }
+*/
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -1426,6 +1429,7 @@ class ProfilePage extends React.Component {
             hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
             src={this.images[this.state.currentIndex]}
             candidate={this.candidatesAll[this.state.currentIndex]}
+            pageType="platforms"
           />
         </div>
       );
