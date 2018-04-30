@@ -57,6 +57,10 @@
 /*  font-family: "Segoe UI";
   letter-spacing: 1px;*/
 }
+
+.notEndorsed.red:before {
+  border: 1px solid red;
+}
 .notEndorsed:before {
   border-radius: 200px;
   border: 1px solid #468cdc;
@@ -361,6 +365,12 @@
 
 .candidateOverlaySlate {
   color: gray;
+}
+
+.candidateOverlaySlate.endorsedBar {
+  background-color: black;
+  color: white;
+  text-align:center;
 }
 
 @media (max-width: 768px) {
