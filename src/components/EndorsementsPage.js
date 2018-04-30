@@ -39,7 +39,7 @@ class ProfileOverlay extends React.Component {
 	             <img src={src} className="candidateModalImage"/>
               </div>
 	            <div className="candidateOverlay">
-	            	<div className="candidateOverlayName"> {candidate.name} </div>
+	            	<div className="candidateOverlayName"> {candidate.position} | {candidate.name} </div>
 	            	<div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
 	            	<div className="candidateOverlayPlatform">{candidate.endorsement_text}</div>
 	            </div>
@@ -76,23 +76,16 @@ class EndorsementsPage extends React.Component {
       		profiles.map(pos => {
 
       			pos.candidates.map(candidate => {
-      				/*if (candidate["endorsed"] == "Yes") {
+      				if (candidate["endorsed"] == "Yes" || candidate["endorsed"] == "yes") {
       					// save candidates info for the position in object state only if the candidate is endorsed
-      					endorsedCandidates[pos.position] = candidate;
-      				}
-      				else
-      				{
-
-      					//console.log("Candidate Not Endorsed: " + candidate.name)
-      				}*/
-
-      				//TODO: Move this code inside the if statement and uncomment the if statement
-      				index += 1;
-      				candidate.position = pos.position;
-      				candidate.index = index;
-      				endorsedCandidates.push(candidate); 
-      				images.push(data.images.s3[candidate.image]['url']);
-              candidate.image = data.images.s3[candidate.image]['url']
+                endorsedCandidates[pos.position] = candidate;
+                index += 1;
+                candidate.position = pos.position;
+                candidate.index = index;
+                endorsedCandidates.push(candidate);
+                images.push(data.images.s3[candidate.image]['url']);
+                candidate.image = data.images.s3[candidate.image]['url']
+              }
       			})
       		});
       		this.images = images;
