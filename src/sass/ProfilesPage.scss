@@ -147,6 +147,20 @@
     text-align: center;
   }
 }
+.endorsedPositionName{
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: 'Overpass Mono', sans-serif;
+  font-size: 1.25em;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
 .candidateName{
   margin: 1em 0em 0em 0em;
   font-family: 'IBM Plex Sans', sans-serif;
