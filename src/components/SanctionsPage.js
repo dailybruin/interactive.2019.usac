@@ -43,7 +43,7 @@ class SanctionsPage extends React.Component {
     // Then we want to group the sanctions by candidate
     let table;
     if (!this.state.candidates) {
-      return <div>Loading...</div>;
+      return <div><h2>Loading...</h2></div>;
     }
     table = this.state.candidates.map(position => {
       return (

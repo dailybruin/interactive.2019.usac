@@ -4,7 +4,7 @@ class ResultsPage extends React.Component {
   render() {
     return(
       <div>
-        The results profile goes here.
+        <h2>Check back later!</h2>
       </div>
     );
   }

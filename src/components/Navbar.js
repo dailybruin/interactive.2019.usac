@@ -21,10 +21,10 @@ const navItems = {
         name: "ENDORSEMENTS",
         link: "/endorsements"
       },
-      {
-        name: "RESULTS",
-        link: "/results"
-      },
+      // {
+      //   name: "RESULTS",
+      //   link: "/results"
+      // },
       {
         name: "RELATED",
         link: "/related"

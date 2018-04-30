@@ -70,102 +70,6 @@ import "../sass/ProfilesPage.scss";
           "position": "President",
           "candidates": [
             {
-              "name": "Kosi Ogbuli",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Kosi.Ogbuli-0d6c919aff90ad0b27b484d44fee3249.jpg",
-              "slate": "For the People",
-              "endorsed": "No",
-              "platform": [
-                "Community: Create a “Community Room” where students can use the president’s office to hold meetings and draft issues advocating for students.",
-                "Culture: Hold UCLA Quarterlies, giving all student groups a space in Wilson Plaza to fundraise and express their talents at the beginning of each quarter. Create a Student Bill of Rights, drafting a list of student rights that will be voted on by the council and lobbied to be endorsed by UCLA Administration.",
-                "Creativity: Raise funding for housing scholarships through an office of the president Spark Campaign. Create an emergency contingency fund in which a student with less than ten swipes can exchange swipes for meal vouchers. Create a USAC congress, where more student voices can be represented."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [
-                {
-                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
-                  "time": "04/21/18 4:30PM",
-                  "title": "Not submitting their campaign expense and sources of funding forms",
-                  "recipients": [
-                    "Kosi Ogbuli",
-                    "Nidirah Stephens",
-                    "Sarena Khasawneh"
-                  ],
-                  "recipientFlat": "Kosi Ogbuli"
-                },
-                {
-                  "link": "https://dailybruin.com/2018/04/20/usac-election-sanction-april-20th/",
-                  "time": "04/20/18 9:15PM",
-                  "title": "Social media campaigning violation",
-                  "recipients": [
-                    "Kosi Ogbuli",
-                    "Nidirah Stephens",
-                    "Sarena Khasawneh"
-                  ],
-                  "recipientFlat": "Kosi Ogbuli"
-                }
-              ],
-              "sanctionCount": 2
-            },
-            {
-              "name": "John Gordon",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
-              "slate": "Independent",
-              "endorsed": "No",
-              "platform": [
-                "Launch a broad career-networking program that all students will have easy access to in order to ease the stress that accompanies applying for internships and jobs.",
-                "Institute a notification system for enrollment passes to rid students of the anxiety that comes during enrollment.",
-                "Bring Chance the Rapper and J. Cole to Bruin Bash to increase UCLA spirit and campuswide involvement in activities.",
-                "Increase enrollment of African-Americans at UCLA from 5.2 percent to double digits by reforming the undergraduate admissions center.",
-                "Audit USAC Office of the President’s budget to reallocate wasted funds toward sexual assault awareness programs around campus."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [
-                {
-                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
-                  "time": "04/21/18 4:05PM",
-                  "title": "Not submitting their campaign expense and sources of funding forms",
-                  "recipients": [
-                    "Jay Manzano",
-                    "John Gordon",
-                    "Justin Suarez"
-                  ],
-                  "recipientFlat": "John Gordon"
-                }
-              ],
-              "sanctionCount": 1
-            },
-            {
-              "name": "Richard White",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.richard.white-0140b6fc7869e6904b7a2d484a0a92de.jpg",
-              "slate": "Leaders Influencing Tomorrow",
-              "endorsed": "No",
-              "platform": [
-                "Improve Student Fee Transparency: Work with the director of UCLA Business and Finance Services and the Registrar's Office to improve the transparency of student fees on Bruin Bill.",
-                "Housing Grants for Students in Need: Advocate with the University of California Office of the President on establishing a new systemwide initiative that provides housing scholarship grants for low-income students.",
-                "Bridging the Gap Between USAC and our Communities: Host quarterly block parties for the campus to engage students in dialogue with council members to discuss USAC and the council's initiatives."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [
-                {
-                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
-                  "time": "04/21/18 4:00PM",
-                  "title": "Not submitting their campaign expense and sources of funding forms",
-                  "recipients": [
-                    "Richard White",
-                    "Salvador Martinez",
-                    "Karla Blessing Savaliolefilemu Thomas",
-                    "Berenise Arriaga",
-                    "Roberto Vasquez",
-                    "Giovanny Machado",
-                    "William Hickman",
-                    "Bethanie Atinuke Sonola"
-                  ],
-                  "recipientFlat": "Richard White"
-                }
-              ],
-              "sanctionCount": 1
-            },
-            {
               "name": "Ashraf Beshay",
               "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Ashraf.Beshay-0438295a3a1366682e5c4c69e5f4f79d.jpg",
               "slate": "Independent",
@@ -226,6 +130,102 @@ import "../sass/ProfilesPage.scss";
               "sanctionCount": 0
             },
             {
+              "name": "John Gordon",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
+              "slate": "Independent",
+              "endorsed": "No",
+              "platform": [
+                "Launch a broad career-networking program that all students will have easy access to in order to ease the stress that accompanies applying for internships and jobs.",
+                "Institute a notification system for enrollment passes to rid students of the anxiety that comes during enrollment.",
+                "Bring Chance the Rapper and J. Cole to Bruin Bash to increase UCLA spirit and campuswide involvement in activities.",
+                "Increase enrollment of African-Americans at UCLA from 5.2 percent to double digits by reforming the undergraduate admissions center.",
+                "Audit USAC Office of the President’s budget to reallocate wasted funds toward sexual assault awareness programs around campus."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [
+                {
+                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
+                  "time": "04/21/18 4:05PM",
+                  "title": "Not submitting their campaign expense and sources of funding forms",
+                  "recipients": [
+                    "Jay Manzano",
+                    "John Gordon",
+                    "Justin Suarez"
+                  ],
+                  "recipientFlat": "John Gordon"
+                }
+              ],
+              "sanctionCount": 1
+            },
+            {
+              "name": "Kosi Ogbuli",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Kosi.Ogbuli-0d6c919aff90ad0b27b484d44fee3249.jpg",
+              "slate": "For the People",
+              "endorsed": "No",
+              "platform": [
+                "Community: Create a “Community Room” where students can use the president’s office to hold meetings and draft issues advocating for students.",
+                "Culture: Hold UCLA Quarterlies, giving all student groups a space in Wilson Plaza to fundraise and express their talents at the beginning of each quarter. Create a Student Bill of Rights, drafting a list of student rights that will be voted on by the council and lobbied to be endorsed by UCLA Administration.",
+                "Creativity: Raise funding for housing scholarships through an office of the president Spark Campaign. Create an emergency contingency fund in which a student with less than ten swipes can exchange swipes for meal vouchers. Create a USAC congress, where more student voices can be represented."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [
+                {
+                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
+                  "time": "04/21/18 4:30PM",
+                  "title": "Not submitting their campaign expense and sources of funding forms",
+                  "recipients": [
+                    "Kosi Ogbuli",
+                    "Nidirah Stephens",
+                    "Sarena Khasawneh"
+                  ],
+                  "recipientFlat": "Kosi Ogbuli"
+                },
+                {
+                  "link": "https://dailybruin.com/2018/04/20/usac-election-sanction-april-20th/",
+                  "time": "04/20/18 9:15PM",
+                  "title": "Social media campaigning violation",
+                  "recipients": [
+                    "Kosi Ogbuli",
+                    "Nidirah Stephens",
+                    "Sarena Khasawneh"
+                  ],
+                  "recipientFlat": "Kosi Ogbuli"
+                }
+              ],
+              "sanctionCount": 2
+            },
+            {
+              "name": "Richard White",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.richard.white-0140b6fc7869e6904b7a2d484a0a92de.jpg",
+              "slate": "Leaders Influencing Tomorrow",
+              "endorsed": "No",
+              "platform": [
+                "Improve Student Fee Transparency: Work with the director of UCLA Business and Finance Services and the Registrar's Office to improve the transparency of student fees on Bruin Bill.",
+                "Housing Grants for Students in Need: Advocate with the University of California Office of the President on establishing a new systemwide initiative that provides housing scholarship grants for low-income students.",
+                "Bridging the Gap Between USAC and our Communities: Host quarterly block parties for the campus to engage students in dialogue with council members to discuss USAC and the council's initiatives."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [
+                {
+                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
+                  "time": "04/21/18 4:00PM",
+                  "title": "Not submitting their campaign expense and sources of funding forms",
+                  "recipients": [
+                    "Richard White",
+                    "Salvador Martinez",
+                    "Karla Blessing Savaliolefilemu Thomas",
+                    "Berenise Arriaga",
+                    "Roberto Vasquez",
+                    "Giovanny Machado",
+                    "William Hickman",
+                    "Bethanie Atinuke Sonola"
+                  ],
+                  "recipientFlat": "Richard White"
+                }
+              ],
+              "sanctionCount": 1
+            },
+            {
               "name": "Furkan Yalcin",
               "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Furkan.Yalcin-480384125cc06ef88b871efaa2e55640.jpg",
               "slate": "Independent",
@@ -246,8 +246,22 @@ import "../sass/ProfilesPage.scss";
           "position": "Internal Vice President",
           "candidates": [
             {
+              "name": "Izzy Gardner",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Izzy.Gardner-823cd65c67c6b1c51c244c270e626d9e.jpg",
+              "slate": "Bruins United",
+              "endorsed": "No",
+              "platform": [
+                "Time's Up: Advocate for funding to provide rape kits and STI treatment for survivors of sexual assault on campus and expand safety resources in Westwood bars.",
+                "Look Before You Book: Work with ASUCLA to streamline room reservation process for student organizations and create a public calendar to highlight the work of student groups.",
+                "No Lines, Good Times: Eliminate the line for home basketball games by working with The Den and UCLA Athletics to create an online ticket reservation process as well as scholarship opportunities for recreational sports and Den Passes."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
+            },
+            {
               "name": "Salvador Martinez",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -279,20 +293,6 @@ import "../sass/ProfilesPage.scss";
               "sanctionCount": 1
             },
             {
-              "name": "Izzy Gardner",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Izzy.Gardner-823cd65c67c6b1c51c244c270e626d9e.jpg",
-              "slate": "Bruins United",
-              "endorsed": "No",
-              "platform": [
-                "Time's Up: Advocate for funding to provide rape kits and STI treatment for survivors of sexual assault on campus and expand safety resources in Westwood bars.",
-                "Look Before You Book: Work with ASUCLA to streamline room reservation process for student organizations and create a public calendar to highlight the work of student groups.",
-                "No Lines, Good Times: Eliminate the line for home basketball games by working with The Den and UCLA Athletics to create an online ticket reservation process as well as scholarship opportunities for recreational sports and Den Passes."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
-            },
-            {
               "name": "Robert Blake Watson",
               "image": "https://assets.dailybruin.com/images/usac.elections2018/web.robert.watson-79564f475346bd9da5b3ef48a0b8ae66.jpg",
               "slate": "Independent",
@@ -311,6 +311,21 @@ import "../sass/ProfilesPage.scss";
         {
           "position": "External Vice President",
           "candidates": [
+            {
+              "name": "Nicole Corona Diaz",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.nicole.cornona.diaz-1132b872e68c992ecda35caebec2eaa7.jpg",
+              "slate": "Independent",
+              "endorsed": "No",
+              "platform": [
+                "Mobilize for Immigrant Rights: Protect and advocate for Deferred Action for Childhood Arrivals and Temporary Protected Status recipients, refugees, a clean DREAM Act and undocumented individuals.",
+                "Take Back [Rent] Control: Fight for tenants’ rights by supporting and working alongside external organizations to pass an existing initiative for statewide rent control.",
+                "Bruin Emergency Response Team: Train a collective of student organizers on how to launch grassroots campaigns so they can pass on this knowledge to the Los Angeles community.",
+                "Resist, Flip Both Congressional Houses: Rally around progressive candidates by educating, registering and phone-banking voters to ensure both the U.S. House of Representatives and Senate maintain an agenda rooted in inclusivity and equity."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
+            },
             {
               "name": "Jamie Kennerk",
               "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Jamie.Kennerk-3c5d85a7755308f3fa808f0b32f04946.jpg",
@@ -334,6 +349,20 @@ import "../sass/ProfilesPage.scss";
                 }
               ],
               "sanctionCount": 1
+            },
+            {
+              "name": "Victoria Solkovits",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Victoria.Solkovits-9e4127bee48acaad486db21d5a21c794.jpg",
+              "slate": "Bruins United",
+              "endorsed": "No",
+              "platform": [
+                "Time's Up: Amplify and support the work of student initiatives against sexual harassment and sexual violence by advocating for a state law mandating biannual Title IX training for students at public universities.",
+                "#WeWillRun: Foster civic participation for all future elections by increasing get-out-the-vote efforts on campus and creating programming to encourage students to engage in local politics.",
+                "Campus Capitol Connection: Make existing resources more accessible to students by creating a streamlined process in which the EVP office assists every step of the way including outreach, training and transparent funding applications."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
             },
             {
               "name": "Karla Blessing Savaliolefilemu Thomas",
@@ -366,41 +395,119 @@ import "../sass/ProfilesPage.scss";
                 }
               ],
               "sanctionCount": 1
-            },
-            {
-              "name": "Nicole Corona Diaz",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.nicole.cornona.diaz-1132b872e68c992ecda35caebec2eaa7.jpg",
-              "slate": "Independent",
-              "endorsed": "No",
-              "platform": [
-                "Mobilize for Immigrant Rights: Protect and advocate for Deferred Action for Childhood Arrivals and Temporary Protected Status recipients, refugees, a clean DREAM Act and undocumented individuals.",
-                "Take Back [Rent] Control: Fight for tenants’ rights by supporting and working alongside external organizations to pass an existing initiative for statewide rent control.",
-                "Bruin Emergency Response Team: Train a collective of student organizers on how to launch grassroots campaigns so they can pass on this knowledge to the Los Angeles community.",
-                "Resist, Flip Both Congressional Houses: Rally around progressive candidates by educating, registering and phone-banking voters to ensure both the U.S. House of Representatives and Senate maintain an agenda rooted in inclusivity and equity."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
-            },
-            {
-              "name": "Victoria Solkovits",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Victoria.Solkovits-9e4127bee48acaad486db21d5a21c794.jpg",
-              "slate": "Bruins United",
-              "endorsed": "No",
-              "platform": [
-                "Time's Up: Amplify and support the work of student initiatives against sexual harassment and sexual violence by advocating for a state law mandating biannual Title IX training for students at public universities.",
-                "#WeWillRun: Foster civic participation for all future elections by increasing get-out-the-vote efforts on campus and creating programming to encourage students to engage in local politics.",
-                "Campus Capitol Connection: Make existing resources more accessible to students by creating a streamlined process in which the EVP office assists every step of the way including outreach, training and transparent funding applications."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
             }
           ]
         },
         {
           "position": "General Representative",
           "candidates": [
+            {
+              "name": "Berenise Arriaga",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
+              "slate": "Leaders Influencing Tomorrow",
+              "endorsed": "No",
+              "platform": [
+                "Film and Literature Festivals: Bring film and literature festivals and discussions to UCLA.",
+                "Creative Art and Recording Studios on Campus: Develop a network of artistic spaces throughout campus for creatives."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [
+                {
+                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
+                  "time": "04/21/18 4:00PM",
+                  "title": "Not submitting their campaign expense and sources of funding forms",
+                  "recipients": [
+                    "Richard White",
+                    "Salvador Martinez",
+                    "Karla Blessing Savaliolefilemu Thomas",
+                    "Berenise Arriaga",
+                    "Roberto Vasquez",
+                    "Giovanny Machado",
+                    "William Hickman",
+                    "Bethanie Atinuke Sonola"
+                  ],
+                  "recipientFlat": "Berenise Arriaga"
+                }
+              ],
+              "sanctionCount": 1
+            },
+            {
+              "name": "Ayesha Haleem",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Ayesha.Haleem-11001758543ba4678a510696c3f5d08c.jpg",
+              "slate": "Independent",
+              "endorsed": "No",
+              "platform": [
+                "Our Community, Our Discourse: Promote a proactive approach toward issues pertaining to campus climate and campus communities through a series of sustained dialogue, facilitated by the members of the community whose identity is being explored.",
+                "Konversations at Kerck: Make administration and faculty more accessible to students by facilitating weekly conversations at Kerckhoff to foster student connections.",
+                "International Student Resource Taskforce: Work with existing campus departments to advocate for the creation of an international student resource center, a Dashew Center advisory board and an international student scholarship database.",
+                "U do U(SAC): Create institutional support for students who aren’t traditionally involved in USAC and enables them to introduce their own programs and advocacy efforts via USAC offices."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
+            },
+            {
+              "name": "Naomi Kisel",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Naomi.Kisel-449ea7fd7cdcfd9915438c1acf63a29d.jpg",
+              "slate": "Bruins United",
+              "endorsed": "No",
+              "platform": [
+                "Y(our) Home: Create tenants’ rights workshop series for students living off-campus.",
+                "Y(our) City: Facilitate quarterly block parties in Westwood.",
+                "Y(our) Story: Organize a UC-wide summit for first-generation students."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
+            },
+            {
+              "name": "Helen-Sage Lee",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Helen_Sage.Lee-20e26a13f88dd1defa6d2f6cc8f9a95c.jpg",
+              "slate": "Independent",
+              "endorsed": "No",
+              "platform": [
+                "jUStice for Survivors of Sexual Assault: Create better continuous preventative education to counter attitudes such as bystanding and victim-blaming, and better educate survivors of trauma about their next immediate steps and promote long-term self-care in students by working with Title IX and CAPS to teach ways to take care in a fun, interactive event, focusing on involvement of marginalized cultures.",
+                "FocUSing on intersectionality of diverse cultures: Create a panel to network while addressing veiled issues like race, gender, sexual orientation, self-care and mental health in STEM. Host a week-long social media campaign ending with a community panel event that creates vulnerable safe spaces through sharing, lean-in circles and small groups.",
+                "Emphasizing the importance of sUStainability: Host a quarterly Sustainival Event with sustainability vendors and campus organizations to convene on-campus to proliferate the zero waste by 2020 goal and a waste-free lifestyle and provide a space to centralize and continue dialogue."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [
+                {
+                  "link": "http://dailybruin.com/2018/04/26/usac-election-sanction-april-26/",
+                  "time": "04/26/18 12:15AM",
+                  "title": "Not having Election Board disclaimer on campaign materials",
+                  "recipients": [
+                    "Helen-Sage Lee"
+                  ],
+                  "recipientFlat": "Helen-Sage Lee"
+                }
+              ],
+              "sanctionCount": 1
+            },
+            {
+              "name": "Bella Martin",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
+              "slate": "Bruins United",
+              "endorsed": "No",
+              "platform": [
+                "Disclose My Costs: Advocate for professors to disclose and justify course costs during enrollment, creating transparency and pressure to lower textbook and materials costs.",
+                "Scooters and Commuters: Promote sustainability and safety on campus by advocating for a bike lane all around the campus loop to prevent students from getting unnecessary citations and decrease injuries from vehicles like Bird and Lime scooters.",
+                "Bruin Service Announcements: Increase student government involvement and engagement by creating short videos explaining the ins and outs of USAC in multiple languages."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [
+                {
+                  "link": "http://dailybruin.com/2018/04/20/usac-election-sanction-april-20th/",
+                  "time": "04/20/18 5:45PM",
+                  "title": "Social media campaigning violation",
+                  "recipients": [
+                    "Bella Martin"
+                  ],
+                  "recipientFlat": "Bella Martin"
+                }
+              ],
+              "sanctionCount": 1
+            },
             {
               "name": "Andrew Sokoler",
               "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Andrew.Sokoler-52a5598c469ea50856b671dce384db05.jpg",
@@ -437,82 +544,22 @@ import "../sass/ProfilesPage.scss";
               "sanctionCount": 2
             },
             {
-              "name": "Berenise Arriaga",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
-              "slate": "Leaders Influencing Tomorrow",
-              "endorsed": "No",
-              "platform": [
-                "Film and Literature Festivals: Bring film and literature festivals and discussions to UCLA.",
-                "Creative Art and Recording Studios on Campus: Develop a network of artistic spaces throughout campus for creatives."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [
-                {
-                  "link": "https://dailybruin.com/2018/04/21/election-board-sanctions-15-candidates-for-missing-deadline-on-paperwork/",
-                  "time": "04/21/18 4:00PM",
-                  "title": "Not submitting their campaign expense and sources of funding forms",
-                  "recipients": [
-                    "Richard White",
-                    "Salvador Martinez",
-                    "Karla Blessing Savaliolefilemu Thomas",
-                    "Berenise Arriaga",
-                    "Roberto Vasquez",
-                    "Giovanny Machado",
-                    "William Hickman",
-                    "Bethanie Atinuke Sonola"
-                  ],
-                  "recipientFlat": "Berenise Arriaga"
-                }
-              ],
-              "sanctionCount": 1
-            },
-            {
-              "name": "Helen-Sage Lee",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Helen_Sage.Lee-20e26a13f88dd1defa6d2f6cc8f9a95c.jpg",
+              "name": "Eduardo Solis",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Edwardo.Solis-920b7ccbe4e0c153f946b98d0d573365.jpg",
               "slate": "Independent",
               "endorsed": "No",
               "platform": [
-                "jUStice for Survivors of Sexual Assault: Create better continuous preventative education to counter attitudes such as bystanding and victim-blaming, and better educate survivors of trauma about their next immediate steps and promote long-term self-care in students by working with Title IX and CAPS to teach ways to take care in a fun, interactive event, focusing on involvement of marginalized cultures.",
-                "FocUSing on intersectionality of diverse cultures: Create a panel to network while addressing veiled issues like race, gender, sexual orientation, self-care and mental health in STEM. Host a week-long social media campaign ending with a community panel event that creates vulnerable safe spaces through sharing, lean-in circles and small groups.",
-                "Emphasizing the importance of sUStainability: Host a quarterly Sustainival Event with sustainability vendors and campus organizations to convene on-campus to proliferate the zero waste by 2020 goal and a waste-free lifestyle and provide a space to centralize and continue dialogue."
+                "Bruins Come First: Implement the National Suicide Hotline phone number on BruinCards.",
+                "UC.US.LA: Showcase the various stories of Bruins who have used CAPS to demonstrate the necessity of allocating more funds to CAPS.",
+                "Show Your Solidarity: Put pressure on UCOP to renew the funds given to the Undocumented Student Program.",
+                "#SupportUndocubruins: Continuation of the scholarship program given to undocumented students on campus.",
+                "Know Your Rights: Bring nonprofit organizations to campus to offer legal advice to our immigrant community.",
+                "Solidarity Coalition: Support the existing work of student organizations, especially with issues affecting marginalized communities.",
+                "No Needs Neglected: Expand the food closet and offer a larger variety of food to students in need."
               ],
               "endorsement_text": "This is why",
-              "sanctionList": [
-                {
-                  "link": "http://dailybruin.com/2018/04/26/usac-election-sanction-april-26/",
-                  "time": "04/26/18 12:15AM",
-                  "title": "Not having Election Board disclaimer on campaign materials",
-                  "recipients": [
-                    "Helen-Sage Lee"
-                  ],
-                  "recipientFlat": "Helen-Sage Lee"
-                }
-              ],
-              "sanctionCount": 1
-            },
-            {
-              "name": "Bella Martin",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
-              "slate": "Bruins United",
-              "endorsed": "No",
-              "platform": [
-                "Disclose My Costs: Advocate for professors to disclose and justify course costs during enrollment, creating transparency and pressure to lower textbook and materials costs.",
-                "Scooters and Commuters: Promote sustainability and safety on campus by advocating for a bike lane all around the campus loop to prevent students from getting unnecessary citations and decrease injuries from vehicles like Bird and Lime scooters.",
-                "Bruin Service Announcements: Increase student government involvement and engagement by creating short videos explaining the ins and outs of USAC in multiple languages."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [
-                {
-                  "link": "http://dailybruin.com/2018/04/20/usac-election-sanction-april-20th/",
-                  "time": "04/20/18 5:45PM",
-                  "title": "Social media campaigning violation",
-                  "recipients": [
-                    "Bella Martin"
-                  ],
-                  "recipientFlat": "Bella Martin"
-                }
-              ],
-              "sanctionCount": 1
+              "sanctionList": [],
+              "sanctionCount": 0
             },
             {
               "name": "Delia Xing",
@@ -538,59 +585,26 @@ import "../sass/ProfilesPage.scss";
                 }
               ],
               "sanctionCount": 1
-            },
-            {
-              "name": "Ayesha Haleem",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Ayesha.Haleem-11001758543ba4678a510696c3f5d08c.jpg",
-              "slate": "Independent",
-              "endorsed": "No",
-              "platform": [
-                "Our Community, Our Discourse: Promote a proactive approach toward issues pertaining to campus climate and campus communities through a series of sustained dialogue, facilitated by the members of the community whose identity is being explored.",
-                "Konversations at Kerck: Make administration and faculty more accessible to students by facilitating weekly conversations at Kerckhoff to foster student connections.",
-                "International Student Resource Taskforce: Work with existing campus departments to advocate for the creation of an international student resource center, a Dashew Center advisory board and an international student scholarship database.",
-                "U do U(SAC): Create institutional support for students who aren’t traditionally involved in USAC and enables them to introduce their own programs and advocacy efforts via USAC offices."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
-            },
-            {
-              "name": "Naomi Kisel",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Naomi.Kisel-449ea7fd7cdcfd9915438c1acf63a29d.jpg",
-              "slate": "Bruins United",
-              "endorsed": "No",
-              "platform": [
-                "Y(our) Home: Create tenants’ rights workshop series for students living off-campus.",
-                "Y(our) City: Facilitate quarterly block parties in Westwood.",
-                "Y(our) Story: Organize a UC-wide summit for first-generation students."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
-            },
-            {
-              "name": "Eduardo Solis",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Edwardo.Solis-920b7ccbe4e0c153f946b98d0d573365.jpg",
-              "slate": "Independent",
-              "endorsed": "No",
-              "platform": [
-                "Bruins Come First: Implement the National Suicide Hotline phone number on BruinCards.",
-                "UC.US.LA: Showcase the various stories of Bruins who have used CAPS to demonstrate the necessity of allocating more funds to CAPS.",
-                "Show Your Solidarity: Put pressure on UCOP to renew the funds given to the Undocumented Student Program.",
-                "#SupportUndocubruins: Continuation of the scholarship program given to undocumented students on campus.",
-                "Know Your Rights: Bring nonprofit organizations to campus to offer legal advice to our immigrant community.",
-                "Solidarity Coalition: Support the existing work of student organizations, especially with issues affecting marginalized communities.",
-                "No Needs Neglected: Expand the food closet and offer a larger variety of food to students in need."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
             }
           ]
         },
         {
           "position": "Academic Affairs Commissioner",
           "candidates": [
+            {
+              "name": "Brock Bauer",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Brock.Bauer-e4e22b3074cd8d4c3f9435ae75294ea8.jpg",
+              "slate": "Bruins United",
+              "endorsed": "No",
+              "platform": [
+                "Bring the Evals to Bruinwalk: Increase professor accountability by creating an option on Office of Instructional Development course evaluations to sync feedback directly to Bruinwalk.com.",
+                "Bruins Breaking Bread: Set up weekly professor-student dinners and programming between faculty and students to bring the UCLA community closer in an informal setting.",
+                "Paths to Success: Collaborate with the UCLA Career Center to create a resource guide that provides students with advice on not only where to begin their professional development at UCLA, but how they can use this resource to achieve their career goals upon graduation."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
+            },
             {
               "name": "Nidirah Stephens",
               "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Nedira.Stevens-58e42e89515f04de516c23960e809a3a.jpg",
@@ -660,20 +674,6 @@ import "../sass/ProfilesPage.scss";
                 }
               ],
               "sanctionCount": 1
-            },
-            {
-              "name": "Brock Bauer",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Brock.Bauer-e4e22b3074cd8d4c3f9435ae75294ea8.jpg",
-              "slate": "Bruins United",
-              "endorsed": "No",
-              "platform": [
-                "Bring the Evals to Bruinwalk: Increase professor accountability by creating an option on Office of Instructional Development course evaluations to sync feedback directly to Bruinwalk.com.",
-                "Bruins Breaking Bread: Set up weekly professor-student dinners and programming between faculty and students to bring the UCLA community closer in an informal setting.",
-                "Paths to Success: Collaborate with the UCLA Career Center to create a resource guide that provides students with advice on not only where to begin their professional development at UCLA, but how they can use this resource to achieve their career goals upon graduation."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
             }
           ]
         },
@@ -830,8 +830,22 @@ import "../sass/ProfilesPage.scss";
           "position": "Financial Support Commissioner",
           "candidates": [
             {
+              "name": "Lior Behdadnia",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Lior.Behdadnia-daccee96a4992907b0ef9f3c67920fd0.jpg",
+              "slate": "Bruins United",
+              "endorsed": "No",
+              "platform": [
+                "Park@UCLA: Develop solutions that make parking more affordable and accessible to students.",
+                "AccessibleUC: Lobby for long-term solutions to simplify and expand financial aid.",
+                "You Are Not a-Loan: Organize regular personal finance and life management skills workshops."
+              ],
+              "endorsement_text": "This is why",
+              "sanctionList": [],
+              "sanctionCount": 0
+            },
+            {
               "name": "Giovanny Machado",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -891,7 +905,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Justin Suarez",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Independent",
               "endorsed": "No",
               "platform": [
@@ -912,20 +926,6 @@ import "../sass/ProfilesPage.scss";
                 }
               ],
               "sanctionCount": 1
-            },
-            {
-              "name": "Lior Behdadnia",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.Lior.Behdadnia-daccee96a4992907b0ef9f3c67920fd0.jpg",
-              "slate": "Bruins United",
-              "endorsed": "No",
-              "platform": [
-                "Park@UCLA: Develop solutions that make parking more affordable and accessible to students.",
-                "AccessibleUC: Lobby for long-term solutions to simplify and expand financial aid.",
-                "You Are Not a-Loan: Organize regular personal finance and life management skills workshops."
-              ],
-              "endorsement_text": "This is why",
-              "sanctionList": [],
-              "sanctionCount": 0
             }
           ]
         },
@@ -954,7 +954,7 @@ import "../sass/ProfilesPage.scss";
           "candidates": [
             {
               "name": "William Hickman",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Leaders Influencing Tomorrow",
               "endorsed": "No",
               "platform": [
@@ -985,7 +985,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Jessica Kim",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-b1a9cfb45f4e013e029ae53437077baf.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
               "slate": "Bruins United",
               "endorsed": "No",
               "platform": [
@@ -1430,7 +1430,7 @@ class ProfilePage extends React.Component {
       );
     }
     else  {
-      return <div>Loading...</div>;
+      return <div><h2>Loading...</h2></div>;
     }
   }
 }
