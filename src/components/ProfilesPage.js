@@ -940,7 +940,7 @@ import "../sass/ProfilesPage.scss";
               "endorsed": "No",
               "platform": [
                 "Observe and hold and programming events during the National Drug and Alcohol Facts Week and work to remove the stigma associated with conversations on alcohol and drug abuse.",
-                "Create a space dedicated to easy mobility aid access, such as crutches and standard wheelchairs, for those who are not able to access these necessities with ease. :end",
+                "Create a space dedicated to easy mobility aid access, such as crutches and standard wheelchairs, for those who are not able to access these necessities with ease.",
                 "Perform a needs assessment of UCLA buildings for accessibility by surveying students.",
                 "Expand co-programming efforts in intersectionality of culture and health through collaboration with existing non-USAC-involved student organizations."
               ],
@@ -960,7 +960,7 @@ import "../sass/ProfilesPage.scss";
               "endorsed": "No",
               "platform": [
                 "Transfer Housing Support: Provide housing closer to campus and housing scholarships for transfer students.",
-                "Reduced Cost Exams and Test Prep for GIs: Provide free and reduced-cost test prep and fee waivers for veteran students. :end",
+                "Reduced Cost Exams and Test Prep for GIs: Provide free and reduced-cost test prep and fee waivers for veteran students.",
                 "Veteran and Parent Internships: Provide parents and veterans flexible internship opportunities."
               ],
               "endorsement_text": "This is why",
