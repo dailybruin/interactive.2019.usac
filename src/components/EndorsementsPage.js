@@ -141,6 +141,30 @@ class EndorsementsPage extends React.Component {
     }));
   }
 
+  printNonCandidates() {
+    var index = 0;
+  	const candidateCards = this.nonendorsedCandidates.map( (candidate) => {
+  		console.log(candidate);
+  		let classcandidate = "endorsed circle";
+  		let style = {
+  			backgroundImage: "url(" + candidate.image + ")",
+  		}
+  		return <div className="candidate_card" onClick={(e) => this.openModal(e, candidate.index)} key={candidate.index} index="{offset+index}">
+					<div className="endorsedPositionName">
+						{candidate.position}
+					</div>
+
+					<div className={classcandidate} style={style}></div>
+     		 		<div className="candidate-info">
+       				 	<div className="candidateName">{candidate.name}</div>
+        				<div className="candidateSlate">{candidate.slate.toUpperCase()}</div>
+      				</div>
+				</div>
+  	}, this);
+
+  	return candidateCards;
+  }
+
 
   printCandidates() {
   	var index = 0;
