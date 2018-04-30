@@ -242,6 +242,17 @@
   text-align: center;
 }
 
+.candidateOverlayPlatform a{
+  position: relative;
+  display: inline;
+  color: black;
+  text-decoration: none;
+  line-height: inherit;
+  font-size: inherit;
+
+  border-radius: 0px;
+}
+
 .modal-body .modal-close {
   right: 0;
   top: 0;
@@ -332,6 +343,10 @@
 .candidateModalInfo{
   @media (min-width: 768px) {
     max-height: 80vh;
+  }
+
+  a {
+    font-size: inherit;
   }
 /*  display: flex;
   flex-direction: row;

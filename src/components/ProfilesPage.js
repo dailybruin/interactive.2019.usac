@@ -1273,8 +1273,8 @@ class ProfileOverlay extends React.Component {
         <div isopen={(!!src).toString()} className="modal">
           <div className='modal-body'>
             <a href="#" className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
-            {hasPrev && <a href="#" className='modal-prev' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
-            {hasNext && <a href="#" className='modal-next' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
+            {hasPrev && <a href="#" className='modal-prev arrow' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
+            {hasNext && <a href="#" className='modal-next arrow' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
             <div className="candidateModalInfo">
               <div className="candidateModalImageContainer">
 	             <img src={src} className="candidateModalImage"/>
