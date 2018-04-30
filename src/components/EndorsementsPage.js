@@ -1,4 +1,5 @@
 import React from "react";
+import ReferendumCard from "./ReferendumCard";
 
 class ProfileOverlay extends React.Component {
   constructor() {
@@ -70,7 +71,8 @@ class EndorsementsPage extends React.Component {
 
       		// Go through the candidates that have endorsed field set to true
       		const profiles = data.data["data.aml"].profiles;
-      		var endorsedCandidates = [];
+          var endorsedCandidates = [];
+          var nonendorsedCandidates = [];
       		var index = -1; // Works correctly for selection
       		var images = [];
       		profiles.map(pos => {
@@ -85,11 +87,20 @@ class EndorsementsPage extends React.Component {
                 endorsedCandidates.push(candidate);
                 images.push(data.images.s3[candidate.image]['url']);
                 candidate.image = data.images.s3[candidate.image]['url']
+              } else {
+                nonendorsedCandidates[pos.position] = candidate;
+                index += 1;
+                candidate.position = pos.position;
+                candidate.index = index;
+                nonendorsedCandidates.push(candidate);
+                images.push(data.images.s3[candidate.image]['url']);
+                candidate.image = data.images.s3[candidate.image]['url']
               }
       			})
       		});
       		this.images = images;
-      		this.endorsedCandidates = endorsedCandidates;
+          this.endorsedCandidates = endorsedCandidates;
+          this.nonendorsedCandidates = nonendorsedCandidates;
       		this.setState({loaded: true});
 
       		this.closeModal = this.closeModal.bind(this);
@@ -130,6 +141,7 @@ class EndorsementsPage extends React.Component {
     }));
   }
 
+
   printCandidates() {
   	var index = 0;
   	const candidateCards = this.endorsedCandidates.map( (candidate) => {
@@ -156,7 +168,8 @@ class EndorsementsPage extends React.Component {
 
   render() {
   	if(this.state.loaded) {
-  		return <div> <div className="positionRow" key={0}><div className="positionCandidates"> {this.printCandidates()} </div>
+  		return <div> <div className="positionRow" key={0}>
+          <div className="positionCandidates"> {this.printCandidates()} </div>
   					</div>
   					<ProfileOverlay
 	  					closeModal = {this.closeModal}
@@ -166,12 +179,15 @@ class EndorsementsPage extends React.Component {
 	            		hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
 	            		src={this.images[this.state.currentIndex]}
 	            		candidate={this.endorsedCandidates[this.state.currentIndex]} />
-	            </div>
+            <div className="positionRow" key={1}>
+
+            </div>
+          </div>
 
   	}
   	else
   	{
-  		return <div> Loading... </div>
+  		return <div><h2>Loading... </h2></div>
   	}
   }
 }
