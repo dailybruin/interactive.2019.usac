@@ -1421,16 +1421,18 @@ class ProfilePage extends React.Component {
           <DropDown options={this.dropdownOptions} value={this.state.displayValue} onClick={this.handleSelection} />
         </div>
           {this.printPositions()}
-          <ProfileOverlay
-            closeModal={this.closeModal}
-            findPrev={this.findPrev}
-            findNext={this.findNext}
-            hasPrev={this.state.currentIndex > 0}
-            hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
-            src={this.images[this.state.currentIndex]}
-            candidate={this.candidatesAll[this.state.currentIndex]}
-            pageType="platforms"
-          />
+          {this.state.currentIndex !== null &&
+            <ProfileOverlay
+              closeModal={this.closeModal}
+              findPrev={this.findPrev}
+              findNext={this.findNext}
+              hasPrev={this.state.currentIndex > 0}
+              hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
+              src={this.images[this.state.currentIndex]}
+              candidate={this.candidatesAll[this.state.currentIndex]}
+              pageType="platforms"
+            />
+          }
         </div>
       );
     }

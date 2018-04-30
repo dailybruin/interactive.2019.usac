@@ -118,8 +118,8 @@ class EndorsementsPage extends React.Component {
       		this.setState({loaded: true});
 
       		this.closeModal = this.closeModal.bind(this);
-    		this.findNext = this.findNext.bind(this);
-    		this.findPrev = this.findPrev.bind(this);
+    		  this.findNext = this.findNext.bind(this);
+    		  this.findPrev = this.findPrev.bind(this);
 
       	});
   }
@@ -132,12 +132,14 @@ class EndorsementsPage extends React.Component {
   openModal(e, index) {
     this.setState ({ currentIndex: index });
   }
+
   closeModal(e) {
     if (e != undefined) {
       e.preventDefault();
     }
     this.setState ({ currentIndex: null });
   }
+
   findPrev(e) {
     if (e != undefined) {
       e.preventDefault();
@@ -186,22 +188,25 @@ class EndorsementsPage extends React.Component {
 
   render() {
   	if(this.state.loaded) {
-  		return <div> <div className="positionRow" key={0}>
-          <div className="positionCandidates"> {this.printCandidates()} </div>
-  					</div>
-  					<ProfileOverlay
-	  					closeModal={this.closeModal}
-	  					findPrev={this.findPrev}
-	  					findNext={this.findNext}
-	            		hasPrev={this.state.currentIndex > 0}
-	            		hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
-	            		src={this.images[this.state.currentIndex]}
-	            		candidate={this.endorsedCandidates[this.state.currentIndex]}
-                  pageType="endorsements" />
-                  <hr />
-              <h2 className="referendum-title">Not Endorsed - International student representative referendum
-</h2>
-<div className="candidateOverlayPlatform">
+  		return (
+        <div>
+          <div className="positionRow" key={0}>
+            <div className="positionCandidates"> {this.printCandidates()} </div>
+  				</div>
+          {this.state.currentIndex !== null &&
+            <ProfileOverlay
+              closeModal={this.closeModal}
+              findPrev={this.findPrev}
+              findNext={this.findNext}
+              hasPrev={this.state.currentIndex > 0}
+              hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
+              src={this.images[this.state.currentIndex]}
+              candidate={this.endorsedCandidates[this.state.currentIndex]}
+              pageType="endorsements" />
+          }
+          <hr />
+          <h2 className="referendum-title">Not Endorsed - International student representative referendum</h2>
+          <div className="candidateOverlayPlatform">
 <p>International students face very real issues on campus. Creating another position on the Undergraduate Students Association Council, however, is merely a Band-Aid solution to the council&rsquo;s shortcomings. For this reason, the board does not endorse this referendum. </p>
 
 <p>Advocates for the international student representative position are right to point out that international students face increasing struggles due to tightening immigration policies under President Donald Trump&rsquo;s administration, lack of state financial aid and the cultural shocks that come from studying at a university thousands of miles from home. </p>
@@ -215,13 +220,10 @@ class EndorsementsPage extends React.Component {
 <p>But this referendum is not the way to ensure such representation in the long term. In 2014, this campus was embroiled in the same debate about whether USAC should add council positions for each underrepresented campus community when it was faced with the choice of whether to add a transfer student representative to the council table. And the answer hasn&rsquo;t changed: The council table in its current structure doesn&rsquo;t have enough room to add a seat for every underrepresented community on campus. </p>
 
 <p>To create a system that fairly represents the undergraduate community, the student body must instead begin the long and difficult journey of restructuring USAC into a senate-styled system. Passing this referendum only pushes that burden onto future Bruins while perpetuating the council&rsquo;s inaccessibility to numerous groups on campus.  </p>
-</div>
-              </div>
-
-
-  	}
-  	else
-  	{
+          </div>
+        </div>
+      )
+    } else {
   		return <div><h2>Loading... </h2></div>
   	}
   }
