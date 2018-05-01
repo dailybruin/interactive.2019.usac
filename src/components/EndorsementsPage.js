@@ -1,67 +1,6 @@
 import React from "react";
 import ReferendumCard from "./ReferendumCard";
-
-class ProfileOverlay extends React.Component {
-  constructor() {
-    super();
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
-  componentDidMount() {
-    document.body.addEventListener('keydown', this.handleKeyDown);
-    console.log("loaded");
-  }
-  componentWillUnMount() {
-    document.body.removeEventListener('keydown', this.handleKeyDown);
-  }
-  handleKeyDown(e) {
-    if (e.keyCode === 27)
-      this.props.closeModal();
-    if (e.keyCode === 37 && this.props.hasPrev)
-      this.props.findPrev();
-    if (e.keyCode === 39 && this.props.hasNext)
-      this.props.findNext();
-  }
-  render () {
-    const { closeModal, hasNext, hasPrev, findNext, findPrev, src, candidate} = this.props;
-    if (!src) {
-      console.log('whut')
-      return null;
-    }
-    let endorsed;
-    if(candidate.endorsed == "Yes") {
-      endorsed = "ENDORSED";
-    } else {
-      endorsed = "NOT ENDORSED";
-    }
-    return (
-      <div id="mount">
-        <div className="modal-overlay" onClick={closeModal}></div>
-        <div isopen={(!!src).toString()} className="modal">
-          <div className='modal-body'>
-            <a href="#" className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
-            {hasPrev && <a href="#" className='modal-prev arrow' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
-            {hasNext && <a href="#" className='modal-next arrow' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
-            <div className="candidateModalInfo">
-              <div className="candidateModalImageContainer">
-	             <img src={src} className="candidateModalImage"/>
-              </div>
-	            <div className="candidateOverlay">
-	            	<div className="candidateOverlayName"> {candidate.position} | {candidate.name} </div>
-	            	<div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
-                <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
-	            	<div dangerouslySetInnerHTML={{__html:candidate.endorsement_text.replace(
-                  /(?:\r\n|\r|\n)/g,
-                  "</br>"
-                )}} className="candidateOverlayPlatform"></div>
-	            </div>
-	        </div>
-          </div>
-
-        </div>
-      </div>
-    )
-  }
-}
+import ProfileOverlay from "./ProfileOverlay";
 
 class EndorsementsPage extends React.Component {
   constructor(props) {
@@ -115,8 +54,8 @@ class EndorsementsPage extends React.Component {
       		this.setState({loaded: true});
 
       		this.closeModal = this.closeModal.bind(this);
-    		this.findNext = this.findNext.bind(this);
-    		this.findPrev = this.findPrev.bind(this);
+    		  this.findNext = this.findNext.bind(this);
+    		  this.findPrev = this.findPrev.bind(this);
 
       	});
   }
@@ -129,12 +68,14 @@ class EndorsementsPage extends React.Component {
   openModal(e, index) {
     this.setState ({ currentIndex: index });
   }
+
   closeModal(e) {
     if (e != undefined) {
       e.preventDefault();
     }
     this.setState ({ currentIndex: null });
   }
+
   findPrev(e) {
     if (e != undefined) {
       e.preventDefault();
@@ -183,21 +124,25 @@ class EndorsementsPage extends React.Component {
 
   render() {
   	if(this.state.loaded) {
-  		return <div> <div className="positionRow" key={0}>
-          <div className="positionCandidates"> {this.printCandidates()} </div>
-  					</div>
-  					<ProfileOverlay
-	  					closeModal = {this.closeModal}
-	  					findPrev = {this.findPrev}
-	  					findNext={this.findNext}
-	            		hasPrev={this.state.currentIndex > 0}
-	            		hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
-	            		src={this.images[this.state.currentIndex]}
-	            		candidate={this.endorsedCandidates[this.state.currentIndex]} />
-                  <hr />
-              <h2 className="referendum-title">Not Endorsed - International student representative referendum
-</h2>
-<div className="candidateOverlayPlatform">
+  		return (
+        <div>
+          <div className="positionRow" key={0}>
+            <div className="positionCandidates"> {this.printCandidates()} </div>
+  				</div>
+          {this.state.currentIndex !== null &&
+            <ProfileOverlay
+              closeModal={this.closeModal}
+              findPrev={this.findPrev}
+              findNext={this.findNext}
+              hasPrev={this.state.currentIndex > 0}
+              hasNext={this.state.currentIndex + 1 < this.endorsedCandidates.length}
+              src={this.images[this.state.currentIndex]}
+              candidate={this.endorsedCandidates[this.state.currentIndex]}
+              pageType="endorsements" />
+          }
+          <hr />
+          <h2 className="referendum-title">Not Endorsed - International student representative referendum</h2>
+          <div className="candidateOverlayPlatform">
 <p>International students face very real issues on campus. Creating another position on the Undergraduate Students Association Council, however, is merely a Band-Aid solution to the council&rsquo;s shortcomings. For this reason, the board does not endorse this referendum. </p>
 
 <p>Advocates for the international student representative position are right to point out that international students face increasing struggles due to tightening immigration policies under President Donald Trump&rsquo;s administration, lack of state financial aid and the cultural shocks that come from studying at a university thousands of miles from home. </p>
@@ -211,13 +156,10 @@ class EndorsementsPage extends React.Component {
 <p>But this referendum is not the way to ensure such representation in the long term. In 2014, this campus was embroiled in the same debate about whether USAC should add council positions for each underrepresented campus community when it was faced with the choice of whether to add a transfer student representative to the council table. And the answer hasn&rsquo;t changed: The council table in its current structure doesn&rsquo;t have enough room to add a seat for every underrepresented community on campus. </p>
 
 <p>To create a system that fairly represents the undergraduate community, the student body must instead begin the long and difficult journey of restructuring USAC into a senate-styled system. Passing this referendum only pushes that burden onto future Bruins while perpetuating the council&rsquo;s inaccessibility to numerous groups on campus.  </p>
-</div>
-              </div>
-
-
-  	}
-  	else
-  	{
+          </div>
+        </div>
+      )
+    } else {
   		return <div><h2>Loading... </h2></div>
   	}
   }

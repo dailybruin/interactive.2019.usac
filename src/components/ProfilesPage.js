@@ -1,5 +1,5 @@
 import React from "react";
-// import ProfileOverlay from "./ProfileOverlay.js";
+import ProfileOverlay from "./ProfileOverlay.js";
 import "../sass/ProfilesPage.scss";
   var dataInfo = {"data": {
     "data.aml": {
@@ -1236,62 +1236,6 @@ class DropDownItems extends React.Component {
     );
   }
 }
-class ProfileOverlay extends React.Component {
-  constructor() {
-    super();
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
-  componentDidMount() {
-    document.body.addEventListener('keydown', this.handleKeyDown);
-    console.log("loaded");
-  }
-  componentWillUnMount() {
-    document.body.removeEventListener('keydown', this.handleKeyDown);
-  }
-  handleKeyDown(e) {
-    if (e.keyCode === 27)
-      this.props.closeModal();
-    if (e.keyCode === 37 && this.props.hasPrev)
-      this.props.findPrev();
-    if (e.keyCode === 39 && this.props.hasNext)
-      this.props.findNext();
-  }
-  render () {
-    const { closeModal, hasNext, hasPrev, findNext, findPrev, src, candidate} = this.props;
-    if (!src) {
-      console.log('whut')
-      return null;
-    }
-    let bulletedPlatforms = candidate.platform.map(bullet => {
-      return(
-        <li>{bullet}</li>
-      );
-    })
-    return (
-      <div id="mount">
-        <div className="modal-overlay" onClick={closeModal}></div>
-        <div isopen={(!!src).toString()} className="modal">
-          <div className='modal-body'>
-            <a href="#" className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
-            {hasPrev && <a href="#" className='modal-prev arrow' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
-            {hasNext && <a href="#" className='modal-next arrow' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
-            <div className="candidateModalInfo">
-              <div className="candidateModalImageContainer">
-	             <img src={src} className="candidateModalImage"/>
-              </div>
-	            <div className="candidateOverlay">
-	            	<div className="candidateOverlayName"> {candidate.name} </div>
-	            	<div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
-	            	<div className="candidateOverlayPlatform"><ul>{bulletedPlatforms}</ul></div>
-	            </div>
-	        </div>
-          </div>
-
-        </div>
-      </div>
-    )
-  }
-}
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -1315,7 +1259,7 @@ class ProfilePage extends React.Component {
     this.state.candidates.forEach(function(position, index){
     	dropdownOptions.push({display: position.position.toUpperCase(), value: index + 1});
     	position.candidates.forEach(function(candidate){
-    		candidate.position = position;
+    		candidate.position = position.position;
     		candidates.push(candidate);
     		images.push(candidate.image);
     	})
@@ -1418,15 +1362,18 @@ class ProfilePage extends React.Component {
           <DropDown options={this.dropdownOptions} value={this.state.displayValue} onClick={this.handleSelection} />
         </div>
           {this.printPositions()}
-          <ProfileOverlay
-            closeModal={this.closeModal}
-            findPrev={this.findPrev}
-            findNext={this.findNext}
-            hasPrev={this.state.currentIndex > 0}
-            hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
-            src={this.images[this.state.currentIndex]}
-            candidate={this.candidatesAll[this.state.currentIndex]}
-          />
+          {this.state.currentIndex !== null &&
+            <ProfileOverlay
+              closeModal={this.closeModal}
+              findPrev={this.findPrev}
+              findNext={this.findNext}
+              hasPrev={this.state.currentIndex > 0}
+              hasNext={this.state.currentIndex + 1 < this.candidatesAll.length}
+              src={this.images[this.state.currentIndex]}
+              candidate={this.candidatesAll[this.state.currentIndex]}
+              pageType="platforms"
+            />
+          }
         </div>
       );
     }

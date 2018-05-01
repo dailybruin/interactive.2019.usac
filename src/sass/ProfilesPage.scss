@@ -125,6 +125,10 @@
   opacity: 0.8;
 }
 
+.candidate-info {
+  margin-top: auto;
+}
+
 .positionRow{
   height: auto;
   border-color: gray;
@@ -159,6 +163,7 @@
   color: black;
   text-transform: uppercase;
   font-weight: 700;
+  height: 72px; // so "president" cards also take up 2 lines (lining up pics)
 
   @media (max-width: 768px) {
     text-align: center;
@@ -179,222 +184,6 @@
   text-align: center;
 }
 
-
-.modal {
-  position: fixed;
-  z-index: 999;
-  width: auto;
-  height:auto;
-  max-height: 80vh;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  background-color: white;
-  min-width:1000px;
-
-  @media (max-width: 768px) {
-    min-width: 0;
-    top: 0;
-    left: 0;
-    transform: none;
-    width: 100%;
-    height: 100%;
-    max-height: 100vh;
-  }
-
-/*  display: inline-flex;*/
-}
-
-/*@media only screen and (max-width: 500px) {
-    .candidateOverlay{
-      display: block;
-      text-align: center;
-
-    }
-}*/
-.modal img {
-  width: 40%;
-  min-width: 300px;
-  border: 5px solid #fff;
-  overflow: hidden;
-  top: 0%;
-
-}
-
-.modal-overlay {
-  position: fixed;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-}
-
-.modal-body a {
-  position: absolute;
-  display: inline;
-  color: #222;
-  text-decoration: none;
-  line-height: 36px;
-  font-size: 30px;
-  font-weight: lighter;
-  background: #fff;
-  border-radius: 5px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-}
-
-.candidateOverlayPlatform a{
-  position: relative;
-  display: inline;
-  color: black;
-  text-decoration: none;
-  line-height: inherit;
-  font-size: inherit;
-
-  border-radius: 0px;
-}
-
-.modal-body .modal-close {
-  right: 0;
-  top: 0;
-  border-radius: 0 0 0 5px;
-}
-
-.modal-body .modal-next,
-.modal-body .modal-prev {
-  right: 0;
-  top: calc(50% - 25px);
-  border-radius: 5px 0 0 5px;
-  height: 50px;
-  line-height: 40px;
-  font-size: 60px;
-}
-
-.modal-body .modal-prev {
-  left: 0;
-  right: auto;
-  border-radius: 0 5px 5px 0;
-}
-
-.modal-body {
-  position: relative;
-  font-family: 'Overpass Mono', sans-serif;
-}
-
-/* Overlay styling */
-
-.candidateModalInfo{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-
-}
-
-
-.candidateModalImageContainer{
-  flex: 1;
-  max-width: 33%;
-
-}
-
-
-
-
-.candidateModalImage{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.candidateOverlay{
-  vertical-align: top;
-  display:flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 5px;
-}
-@media only screen and (max-device-width: 768px){
-  .candidateOverlay{
-    display:block;
-  }
-  .candidateModalInfo{
-    justify-content: center;
-  }
-  .candidateName{
-    text-align: center;
-  }
-  .candidateSlate{
-    text-align: center;
-  }
-  .candidateOverlayPlatform{
-    text-align: center;
-    overflow-y: scroll;
-  }
-  .modal img {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.candidateOverlayPlatform{
-  flex: 5;
-  max-width: 100%;
-  overflow: scroll;
-  font-family: 'IBM Plex Sans', sans-serif;
-}
-.candidateModalInfo{
-  @media (min-width: 768px) {
-    max-height: 80vh;
-  }
-
-  a {
-    font-size: inherit;
-  }
-/*  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;*/
-}
-
-.candidateOverlayName {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 700;
-  font-size:  2em;
-}
-
-.candidateOverlaySlate {
-  color: gray;
-}
-
-.candidateOverlaySlate.endorsedBar {
-  background-color: black;
-  color: white;
-  text-align:center;
-}
-
-@media (max-width: 768px) {
-
-    .candidateModalInfo {
-      flex-direction: column;
-      justify-content: flex-start;
-      flex-grow: 0;
-      height: 100vh;
-      overflow-y: scroll;
-    }
-
-    .candidateModalImageContainer {
-      max-width: 100%;
-    }
-
-    .candidateOverlay {
-      text-align: center;
-    }
-
-    .candidateOverlayPlatform{
-      text-align: left;
-    }
-  }
 .dropdown-width {
   width: 100%;
 }
