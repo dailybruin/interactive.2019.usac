@@ -9,7 +9,6 @@ class ProfileOverlay extends React.Component {
 
   componentDidMount() {
     document.body.addEventListener("keydown", this.handleKeyDown);
-    console.log("mounted for some reason??");
     document.body.classList.add('disable-scroll')
   }
 
@@ -75,7 +74,7 @@ class ProfileOverlay extends React.Component {
               <img src={src} className="candidateModalImage"/>
             </div>
             <div className="candidateOverlay">
-              <div className="candidateOverlayName"> {candidate.name} </div>
+              <div className="candidateOverlayName"> {candidate.position.position + ' | ' + candidate.name} </div>
               <div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
               <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
               {this.getAppropriatePlatformText(pageType)}
