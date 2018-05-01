@@ -67,7 +67,7 @@
   background: #fff;
   border-radius: 5px;
   text-align: center;
-  overflow-y: scroll;
+  overflow: visible;
 }
 
 .modal-controls .modal-close {
@@ -111,7 +111,7 @@
   justify-content: flex-start;
   flex-direction: row;
   padding: 10px;
-  max-height: 80vh;
+  max-height: 72vh;
 }
 
 .candidateModalImageContainer {
@@ -161,7 +161,7 @@
 .candidateOverlayPlatform {
   flex: 5;
   max-width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -200,7 +200,7 @@
   }
 
   .candidateOverlayPlatform {
-    overflow: visible;
+    overflow-y: visible;
     text-align: left;
   }
 }
