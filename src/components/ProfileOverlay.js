@@ -76,7 +76,9 @@ class ProfileOverlay extends React.Component {
             <div className="candidateOverlay">
               <div className="candidateOverlayName"> {candidate.position + ' | ' + candidate.name} </div>
               <div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
-              <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
+              {pageType === "endorsements" &&
+                <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
+              }
               {this.getAppropriatePlatformText(pageType)}
             </div>
           </div>
