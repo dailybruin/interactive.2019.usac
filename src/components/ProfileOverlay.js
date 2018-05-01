@@ -74,7 +74,7 @@ class ProfileOverlay extends React.Component {
               <img src={src} className="candidateModalImage"/>
             </div>
             <div className="candidateOverlay">
-              <div className="candidateOverlayName"> {candidate.position.position + ' | ' + candidate.name} </div>
+              <div className="candidateOverlayName"> {candidate.position + ' | ' + candidate.name} </div>
               <div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
               <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
               {this.getAppropriatePlatformText(pageType)}

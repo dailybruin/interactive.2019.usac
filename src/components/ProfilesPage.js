@@ -1259,7 +1259,7 @@ class ProfilePage extends React.Component {
     this.state.candidates.forEach(function(position, index){
     	dropdownOptions.push({display: position.position.toUpperCase(), value: index + 1});
     	position.candidates.forEach(function(candidate){
-    		candidate.position = position;
+    		candidate.position = position.position;
     		candidates.push(candidate);
     		images.push(candidate.image);
     	})
