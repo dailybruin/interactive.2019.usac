@@ -168,7 +168,7 @@
 .candidateOverlayName {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
-  font-size:  2em;
+  font-size: 2em;
 }
 
 .candidateOverlaySlate {
@@ -176,25 +176,31 @@
   color: gray;
 }
 
+.candidateOverlaySlate.endorsedBar {
+  background-color: black;
+  color: white;
+  text-align:center;
+  margin-bottom: 2px;
+}
+
 @media (max-width: 768px) {
-
-    .candidateModalInfo {
-      display: inline-block;
-      max-height: 100vh;
-      overflow-y: scroll;
-    }
-
-    .candidateOverlay {
-      text-align: center;
-      padding: 0 10px 25px;
-    }
-
-    .candidateModalImageContainer {
-      max-width: 100%;
-    }
-
-    .candidateOverlayPlatform {
-      overflow: visible;
-      text-align: left;
-    }
+  .candidateModalInfo {
+    display: inline-block;
+    max-height: 100vh;
+    overflow-y: scroll;
   }
+
+  .candidateOverlay {
+    text-align: center;
+    padding: 0 10px 25px;
+  }
+
+  .candidateModalImageContainer {
+    max-width: 100%;
+  }
+
+  .candidateOverlayPlatform {
+    overflow: visible;
+    text-align: left;
+  }
+}
