@@ -54,6 +54,13 @@ class ProfileOverlay extends React.Component {
       return null;
     }
 
+    let endorsed;
+    if (candidate.endorsed == "Yes") {
+      endorsed = "ENDORSED";
+    } else {
+      endorsed = "NOT ENDORSED";
+    }
+
     return (
       <div id="mount">
         <div className="modal-overlay" onClick={closeModal} />
@@ -70,6 +77,7 @@ class ProfileOverlay extends React.Component {
             <div className="candidateOverlay">
               <div className="candidateOverlayName"> {candidate.name} </div>
               <div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
+              <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
               {this.getAppropriatePlatformText(pageType)}
             </div>
           </div>
