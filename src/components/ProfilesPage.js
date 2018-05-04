@@ -986,7 +986,7 @@ import "../sass/ProfilesPage.scss";
             },
             {
               "name": "Jessica Kim",
-              "image": "https://assets.dailybruin.com/images/usac.elections2018/image-e74eebb1bfdd05643d4698b512fdfb22.jpg",
+              "image": "https://assets.dailybruin.com/images/usac.elections2018/web.jessicakim-4257f386a5847fa4b056cf71ec60aed7.jpg",
               "slate": "Bruins United",
               "endorsed": "No",
               "platform": [
