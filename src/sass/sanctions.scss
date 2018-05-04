@@ -73,6 +73,23 @@ a {
   }
 }
 
+.sanctions-entry.results:first-of-type {
+  background-color: #06ce00;
+  color: white;
+
+  .slate {
+    color: white;
+  }
+}
+
+.sanctions-entry.results:not(:first-of-type) {
+  opacity: 0.3;
+}
+
+.sanctions-entry.results:not(:first-of-type):hover {
+  opacity: 1;
+}
+
 .entry-header {
   display: flex;
   flex-direction: row;
