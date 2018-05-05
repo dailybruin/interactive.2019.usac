@@ -33,7 +33,7 @@ class ResultsTable extends React.Component {
     ));
     return (
       // TODO: Map each candidate within the position + their sanctions
-      <div>
+      <div className={this.props.genRep ? "gen-rep" : "not-gen-rep"}>
         <h2>{this.props.positionData.position.toUpperCase()}</h2>
         {tableSections}
       </div>

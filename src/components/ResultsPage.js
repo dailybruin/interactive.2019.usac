@@ -57,6 +57,7 @@ class ResultsPage extends React.Component {
             positionData={position}
             sanctions={this.state.sanctionData}
             candidateData={position.candidates}
+            genRep={position.position ? true : false}
           />
         );
       } else {

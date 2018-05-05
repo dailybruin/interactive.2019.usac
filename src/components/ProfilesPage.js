@@ -1241,8 +1241,8 @@ class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", 'https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/', false ); // false for synchronous request
-    xmlHttp.send( null );
+    //xmlHttp.open( "GET", 'https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/', false ); // false for synchronous request
+    //xmlHttp.send( null );
 
     this.state = {
     	// candidates: JSON.parse(xmlHttp.responseText)['data']['data.aml']['profiles'],

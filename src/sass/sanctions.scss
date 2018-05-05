@@ -73,6 +73,28 @@ a {
   }
 }
 
+.gen-rep {
+  .sanctions-entry.results:nth-of-type(2) {
+    background-color: #06ce00;
+    color: white;
+    opacity: 1.0;
+
+    .slate {
+      color: white;
+    }
+  }
+
+  .sanctions-entry.results:nth-of-type(3) {
+    background-color: #06ce00;
+    color: white;
+    opacity: 1.0;
+
+    .slate {
+      color: white;
+    }
+  }
+}
+
 .sanctions-entry.results:first-of-type {
   background-color: #06ce00;
   color: white;
