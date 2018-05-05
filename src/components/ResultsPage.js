@@ -1,17 +1,21 @@
 import React from "React";
 import ResultsTable from "./ResultsTable";
+import HackyReferendaTable from "./HackyReferendaTable";
 import "../sass/sanctions.scss";
+
 class ResultsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sanctionData: 1,
-      candidates: null,
+      candidates: null
     };
   }
 
   getInfo() {
-    fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/")
+    fetch(
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/"
+    )
       .then(res => res.json())
       .then(data => {
         const sanctions = data.data["data.aml"].sanctions;
@@ -57,7 +61,9 @@ class ResultsPage extends React.Component {
             positionData={position}
             sanctions={this.state.sanctionData}
             candidateData={position.candidates}
-            genRep={position.position=="General Representative" ? true : false}
+            genRep={
+              position.position == "General Representative" ? true : false
+            }
           />
         );
       } else {
@@ -67,7 +73,13 @@ class ResultsPage extends React.Component {
       }
     });
     // Group candidates by position
-    return <div>{table}</div>;
+    return (
+      <div>
+        {table}
+        <hr />
+        <HackyReferendaTable />
+      </div>
+    );
   }
 }
 
