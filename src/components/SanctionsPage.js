@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import SanctionsTable from "./SanctionsTable";
 import SanctionsRecent from "./SanctionsRecent";
 import "../sass/sanctions.scss";
