@@ -109,7 +109,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 10px 30px 10px;
   min-height: 300px;
   max-width: 240px;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 4px 0px;
@@ -139,14 +139,15 @@
 .positionCandidates{
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+
 
   @media (max-width: 768px) {
     justify-content: center;
   }
 }
 .positionName{
-/*  text-align: center;*/
+  text-align: center;
   padding-bottom: 10px;
   font-family: 'Bitter', sans-serif;
   font-size: 1.25em;
