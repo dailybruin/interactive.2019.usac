@@ -12,7 +12,7 @@ class SanctionsRecent extends React.Component {
       return (
         <div className="sanction-list-entry">
           <a href={sanction.link} target="_blank">
-            <div className="entry-title">{sanction.title}</div>
+            <div className="entry-title">{sanction.recipients} | {sanction.title}</div>
             <div className="entry-time">{sanction.time}</div>
           </a>
           <hr />

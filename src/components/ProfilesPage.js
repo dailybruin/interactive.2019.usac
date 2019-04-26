@@ -123,37 +123,21 @@ class ProfilePage extends React.Component {
       images: null,
       loaded: false
     };
-    // this.ca = [];
-    // var dropdownOptions = [{display: 'ALL CANDIDATES', value: 0}]
-    // var candidates = [];
-    // var images = [];
     this.handleSelection = this.handleSelection.bind(this);
-    // this.state.candidates.forEach(function(position, index){
-    // 	dropdownOptions.push({display: position.position.toUpperCase(), value: index + 1});
-    // 	position.candidates.forEach(function(candidate){
-    // 		candidate.position = position.position;
-    // 		candidates.push(candidate);
-    // 		images.push(candidate.image);
-    // 	})
-    // })
-    // this.images = images;
-    // this.candidatesAll = candidates;
-    // this.dropdownOptions = dropdownOptions;
     this.closeModal = this.closeModal.bind(this);
     this.findNext = this.findNext.bind(this);
     this.printPositions = this.printPositions.bind(this);
     this.findPrev = this.findPrev.bind(this);
-    // this.renderImageContent = this.renderImageContent.bind(this);
   }
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
     )
       .then(res => res.json())
       .then(data => {
         let candidatesTemp = [];
-        let images = [];
+        let imagesTemp = [];
         let dropdownOptions = [{ display: "ALL CANDIDATES", value: 0 }];
         let candidatesRes = data.data["data.aml"].profiles;
         candidatesRes.forEach(function(position, index) {
@@ -172,15 +156,38 @@ class ProfilePage extends React.Component {
           sortedCandidates.forEach(function(candidate) {
             candidate.position = position.position;
             candidatesTemp.push(candidate);
-            images.push(candidate.image);
+            // if available image on s3
+            let potentialImage = null;
+            if (data.images.s3[candidate.image])
+              potentialImage = data.images.s3[candidate.image].url;
+            console.log(potentialImage);
+            if (potentialImage) {
+              console.log("push");
+              imagesTemp.push(potentialImage);
+            } else {
+              imagesTemp.push(null);
+            }
+          });
+        });
+        let profilesImgReplace = data.data["data.aml"].profiles;
+        profilesImgReplace.forEach(function(position) {
+          position.candidates.forEach(function(candidate) {
+            let potentialImage = null;
+            if (data.images.s3[candidate.image])
+              potentialImage = data.images.s3[candidate.image].url;
+            if (potentialImage) {
+              candidate.image = potentialImage;
+            } else {
+              candidate.image = null;
+            }
           });
         });
         this.setState({
-          images: images,
+          images: imagesTemp,
           loaded: true,
           candidates: candidatesTemp,
           dropdownOptions: dropdownOptions,
-          profiles: data.data["data.aml"].profiles
+          profiles: profilesImgReplace
         });
       });
   }

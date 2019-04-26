@@ -8,14 +8,17 @@ class SanctionsPage extends React.Component {
     this.state = {
       sanctionData: 1,
       candidates: null,
+      loaded: false
     };
   }
 
   getInfo() {
-    fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/")
+    fetch(
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
+    )
       .then(res => res.json())
       .then(data => {
-        const sanctions = data.data["data.aml"].sanctions;
+        // const sanctions = data.data["data.aml"].sanctions;
         const candidateData = data.data["data.aml"].profiles;
         const images = data.images.s3;
         candidateData.map(candidate => {
@@ -31,7 +34,17 @@ class SanctionsPage extends React.Component {
         //Get images from Kerckhoff
         console.log("candidates");
         console.log(candidateData);
-        this.setState({ sanctionData: sanctions, candidates: candidateData });
+        fetch(
+          "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.violation/"
+        )
+          .then(res => res.json())
+          .then(data => {
+            this.setState({
+              sanctionData: data.data["data.aml"].sanctions,
+              loaded: true,
+              candidates: candidateData
+            });
+          });
       });
   }
 
@@ -43,8 +56,12 @@ class SanctionsPage extends React.Component {
     // We want to separate sanctions (if one has multiple recipients create a sanction for each one)
     // Then we want to group the sanctions by candidate
     let table;
-    if (!this.state.candidates) {
-      return <div><h2>Loading...</h2></div>;
+    if (!this.state.loaded) {
+      return (
+        <div>
+          <h2>Loading...</h2>
+        </div>
+      );
     }
     table = this.state.candidates.map(position => {
       return (

@@ -1,16 +1,17 @@
 nav {
-  font-family: 'Overpass Mono', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.25em;
-  font-weight: 700;
+  font-weight: 400;
 
   @media (max-width:768px) {
     font-size:1em;
   }
 
   header {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Bitter', sans-serif;
     font-size: 2em;
     text-align: center;
+    text-transform: uppercase;
 
     @media (max-width:768px) {
       font-size:1.5em;

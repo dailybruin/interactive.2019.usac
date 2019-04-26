@@ -9,12 +9,12 @@ class ProfileOverlay extends React.Component {
 
   componentDidMount() {
     document.body.addEventListener("keydown", this.handleKeyDown);
-    document.body.classList.add('disable-scroll')
+    document.body.classList.add("disable-scroll");
   }
 
   componentWillUnmount() {
     document.body.removeEventListener("keydown", this.handleKeyDown);
-    document.body.classList.remove('disable-scroll')
+    document.body.classList.remove("disable-scroll");
   }
 
   handleKeyDown(e) {
@@ -25,33 +25,47 @@ class ProfileOverlay extends React.Component {
 
   getAppropriatePlatformText(pageType) {
     if (pageType === "endorsements") {
-      return <div
-      dangerouslySetInnerHTML={{
-        __html: this.props.candidate.endorsement_text.replace(
-          /(?:\r\n|\r|\n)/g,
-          "</br>"
-        )
-      }}
-      className="candidateOverlayPlatform"
-      />;
-
-    } else { // platforms
+      return (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: this.props.candidate.endorsement_text.replace(
+              /(?:\r\n|\r|\n)/g,
+              "</br>"
+            )
+          }}
+          className="candidateOverlayPlatform"
+        />
+      );
+    } else {
+      // platforms
       let bulletedPlatforms = this.props.candidate.platform.map(bullet => {
         return <li>{bullet}</li>;
-      })
+      });
 
-      return <div className="candidateOverlayPlatform"><ul>{bulletedPlatforms}</ul></div>;
+      return (
+        <div className="candidateOverlayPlatform">
+          <ul>{bulletedPlatforms}</ul>
+        </div>
+      );
     }
   }
 
-
   render() {
-    const { closeModal, hasNext, hasPrev, findNext, findPrev, src, candidate, pageType } = this.props;
+    const {
+      closeModal,
+      hasNext,
+      hasPrev,
+      findNext,
+      findPrev,
+      src,
+      candidate,
+      pageType
+    } = this.props;
 
-    if (!src) {
-      console.log("whut");
-      return null;
-    }
+    // if (!src) {
+    //   console.log("whut");
+    //   return null;
+    // }
 
     let endorsed;
     if (candidate.endorsed == "Yes") {
@@ -64,27 +78,67 @@ class ProfileOverlay extends React.Component {
       <div id="mount">
         <div className="modal-overlay" onClick={closeModal} />
         <div isopen={(!!src).toString()} className="modal">
-          <div className='modal-controls'>
-            <a href="#" className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}>&times;</a>
-            {hasPrev && <a href="#" className='modal-prev arrow' onClick={findPrev} onKeyDown={this.handleKeyDown}>&lsaquo;</a>}
-            {hasNext && <a href="#" className='modal-next arrow' onClick={findNext} onKeyDown={this.handleKeyDown}>&rsaquo;</a>}
+          <div className="modal-controls">
+            <a
+              href="#"
+              className="modal-close"
+              onClick={closeModal}
+              onKeyDown={this.handleKeyDown}
+            >
+              &times;
+            </a>
+            {hasPrev && (
+              <a
+                href="#"
+                className="modal-prev arrow"
+                onClick={findPrev}
+                onKeyDown={this.handleKeyDown}
+              >
+                &lsaquo;
+              </a>
+            )}
+            {hasNext && (
+              <a
+                href="#"
+                className="modal-next arrow"
+                onClick={findNext}
+                onKeyDown={this.handleKeyDown}
+              >
+                &rsaquo;
+              </a>
+            )}
           </div>
           <div className="candidateModalInfo">
             <div className="candidateModalImageContainer">
-              <img src={src} className="candidateModalImage"/>
+              <img src={src} className="candidateModalImage" />
             </div>
             <div className="candidateOverlay">
-              <div className="candidateOverlayName"> {candidate.position + ' | ' + candidate.name} </div>
-              <div className="candidateOverlaySlate"> {candidate.slate.toUpperCase()} </div>
+              <div className="candidateOverlayName">
+                {" "}
+                {candidate.position + " | " + candidate.name}{" "}
+              </div>
+              <div className="candidateOverlaySlate">
+                {" "}
+                {candidate.slate.toUpperCase()}{" "}
+              </div>
               {pageType === "endorsements" &&
-                <div className="candidateOverlaySlate endorsedBar"> {endorsed} </div>
-              }
+                endorsed == "ENDORSED" && (
+                  <div className="candidateOverlaySlate endorsedBar">
+                    {endorsed}
+                  </div>
+                )}
+              {pageType === "endorsements" &&
+                endorsed == "NOT ENDORSED" && (
+                  <div className="candidateOverlaySlate notEndorsedBar">
+                    {endorsed}
+                  </div>
+                )}
               {this.getAppropriatePlatformText(pageType)}
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

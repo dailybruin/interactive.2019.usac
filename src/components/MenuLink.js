@@ -5,7 +5,7 @@ function MenuLink(props) {
   return (
     <li>
       <NavLink
-        activeStyle={{ "borderBottom": "5px solid #FFE491" }}
+        activeStyle={{ "color": "#1780CC" }}
         to={props.dest}
       >
         {props.name}

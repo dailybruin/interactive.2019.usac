@@ -42,6 +42,7 @@
   line-height: 200px;
   position: relative;
   margin: 25px 20px 0px 20px;
+  // box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 4px 0px;
   transition: 0.5s;
 }
 .endorsed.circle:hover {
@@ -59,11 +60,11 @@
 }
 
 .notEndorsed.red:before {
-  border: 1px solid red;
+  border: 3px solid red;
 }
 .notEndorsed:before {
   border-radius: 200px;
-  border: 1px solid #468cdc;
+  border: 3px solid #1780CC;
   /*box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), 0 0 15px rgba(0, 255, 204, 0.15) inset;*/
   content: "";
   display: block;
@@ -98,6 +99,7 @@
   margin-top: 25px;
   transition: 0.5s;
   margin: 25px 20px 0px 20px;
+  // box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 4px 0px;
   transition: 0.5s;
 }
 .notEndorsed.circle:hover {
@@ -145,7 +147,7 @@
 .positionName{
 /*  text-align: center;*/
   padding-bottom: 10px;
-  font-family: 'Overpass Mono', sans-serif;
+  font-family: 'Bitter', sans-serif;
   font-size: 1.25em;
   color: black;
   text-transform: uppercase;
@@ -172,13 +174,13 @@
 
 .candidateName{
   margin: 1em 0em 0em 0em;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   font-weight: 700;
   text-align: center;
 }
 .candidateSlate{
-  font-family: 'Overpass Mono', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.8em;
   color: gray;
   text-align: center;
@@ -192,18 +194,18 @@
   position: relative;
   font-size: 1rem;
   margin-top: 1em;
-  font-family: 'Overpass Mono', monospace;
+  font-family: 'Open Sans', monospace;
 }
 .bd-dropdown.__active > .__control {
-  border: 0.1rem solid #ccd4d8;
+  border: 0.1rem solid #1780CC;
   border-radius: 0.2rem 0.2rem 0 0;
-  font-family: 'Overpass Mono', monospace;
+  font-family: 'Open Sans', monospace;
 }
 .bd-dropdown .__control {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0.75rem;
-  border: 0.1rem solid #ccd4d8;
+  border: 0.1rem solid #1780CC;
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   background-color: #fff;
   color: #667d89;

@@ -41,7 +41,7 @@ class Navbar extends React.Component {
     );
     return (
       <nav>
-        <header>USAC Elections 2018</header>
+        <header>USAC Elections 2019</header>
         <ul className="links">{links}</ul>
       </nav>
     );

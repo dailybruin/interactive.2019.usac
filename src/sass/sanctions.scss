@@ -14,6 +14,7 @@ a {
   transition: all 0.3s ease;
   z-index: 1;
   margin: 2px;
+  border: 1px solid #909090;
 }
 
 .content{
@@ -26,18 +27,45 @@ a {
   }
 }
 
+
 .sanction-list-entry {
   padding: 0 10px 0 10px;
 
   .entry-title {
     font-size: 1.2em;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
   }
 
   .entry-time {
     font-size: 0.8em;
-    font-family: 'Overpass Mono', monospace;
+    font-family: 'Open Sans', monospace;
     color: gray;
+  }
+
+  .entry-in-table-header {
+    background-color: #1780CC;
+    padding: 5px;
+    color: white;
+    margin: 0 -10px 0 -10px;
+    padding: 5px 15px 5px 15px;
+
+    .entry-title {
+      font-size: 1.2em;
+      font-family: 'Bitter', sans-serif;
+    }
+
+    .entry-time {
+      font-size: 0.8em;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+    }
+  }
+
+  .entry-blurb {
+    font-size: 1em;
+    font-family: 'Open Sans', monospace;
+    padding: 5px;
   }
 }
 
@@ -50,23 +78,26 @@ a {
 .entry-body {
   overflow: hidden;
   transition: all 0.3s ease;
-  border: 2px solid white;
+  // border: 2px solid white;
 }
 
 .sanctions-entry.active {
+  box-shadow: 0px 1px 10px 0px rgba(23,128,204,0.5);
+  border: 2px solid #1780CC;
+
   .entry-body {
-    border: 2px solid #6900CA;
+    // border: 2px solid #1780CC;
     padding-top: 10px;
   }
 
-  .entry-header {
-    background-color: #6900CA;
-    color: white;
-  }
+  // .entry-header {
+    // background-color: #1780CC;
+  //   color: white;
+  // }
 
-  .slate {
-    color: white;
-  }
+  // .slate {
+  //   color: white;
+  // }
 
   .photo {
     border: 2px solid white;
@@ -121,11 +152,11 @@ a {
   cursor: pointer;
 
   .photo {
-    height: 2.5em;
-    width: 2.5em;
+    height: 4.5em;
+    width: 4.5em;
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid green;
+    // border: 2px solid green;
     margin: 0px 10px 0px 10px;
     flex-shrink: 0;
   }
@@ -136,8 +167,8 @@ a {
   }
 
   .score {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 2.5em;
+    font-family: 'Bitter', sans-serif;
+    font-size: 4.5em;
     font-weight: 700;
     padding: 0 2px 0 2px;
     margin-left: auto;
@@ -145,13 +176,13 @@ a {
   }
 
   .name {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4em;
     font-weight: 700;
   }
 
   .slate {
-    font-family: 'Overpass Mono', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
     font-weight: 400;
     color: gray;
@@ -161,7 +192,7 @@ a {
 }
 
 h2 {
-  font-family: 'Overpass Mono', sans-serif;
+  font-family: 'Bitter', sans-serif;
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }

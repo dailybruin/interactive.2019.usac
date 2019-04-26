@@ -7,9 +7,9 @@
 
 .referendum-card {
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
+  border-color: #1780CC;
   margin: 20px 10px;
-  padding: 10px;
   white-space: pre-wrap;
   max-width: 75%;
 
@@ -19,13 +19,18 @@
 }
 
 .referendum-title {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Bitter', sans-serif;
+  // margin: -10px -10px -10px 0px;
+  background-color: #1780CC;
+  color: white;
   font-size: 2em;
-  margin: 2px 0;
+  margin: 0px;
+  padding: 10px;
 }
 
 .referendum-desc {
-  font-family: 'Overpass Mono', sans-serif;
-  font-size: 0.8em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
   margin: 2px 0;
+  padding: 10px;
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
+import "../sass/modal.scss";
+import "../sass/sanctions.scss";
 /*
 key={c.name}
 name={c.name}
@@ -19,8 +21,10 @@ class SanctionsEntry extends React.Component {
   }
 
   toggleList(e) {
-    const current = this.state.active;
-    this.setState({ active: !current });
+    if (this.props.list.length > 0) {
+      const current = this.state.active;
+      this.setState({ active: !current });
+    }
   }
 
   render() {
@@ -28,10 +32,17 @@ class SanctionsEntry extends React.Component {
       return (
         <div className="sanction-list-entry">
           <a href={sanctions.link} target="_blank">
-            <div className="entry-title">{sanctions.title}</div>
-            <div className="entry-time">{sanctions.time}</div>
+            <div className="entry-in-table-header">
+              <div className="entry-title">{sanctions.title}</div>
+              <div className="entry-time">{sanctions.time}</div>
+            </div>
+            <div
+              className="entry-blurb"
+              dangerouslySetInnerHTML={{
+                __html: sanctions.brief.replace(/(?:\r\n|\r|\n)/g, "</br>")
+              }}
+            />
           </a>
-          <hr />
         </div>
       );
     });
