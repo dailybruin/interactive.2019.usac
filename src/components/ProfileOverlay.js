@@ -25,12 +25,13 @@ class ProfileOverlay extends React.Component {
 
   getAppropriatePlatformText(pageType) {
     if (pageType === "endorsements") {
+      console.log(this.props.candidate.endorsement_text);
       return (
         <div
           dangerouslySetInnerHTML={{
             __html: this.props.candidate.endorsement_text.replace(
-              /(?:\r\n|\r|\n)/g,
-              "</br>"
+              /(?:\r\n\r\n\r\n)/g,
+              "</br></br>"
             )
           }}
           className="candidateOverlayPlatform"
@@ -113,15 +114,7 @@ class ProfileOverlay extends React.Component {
               <img src={src} className="candidateModalImage" />
             </div>
             <div className="candidateOverlay">
-              <div className="candidateOverlayName">
-                {" "}
-                {candidate.position + " | " + candidate.name}{" "}
-              </div>
-              <div className="candidateOverlaySlate">
-                {" "}
-                {candidate.slate.toUpperCase()}{" "}
-              </div>
-              {pageType === "endorsements" &&
+            {pageType === "endorsements" &&
                 endorsed == "ENDORSED" && (
                   <div className="candidateOverlaySlate endorsedBar">
                     {endorsed}
@@ -133,6 +126,14 @@ class ProfileOverlay extends React.Component {
                     {endorsed}
                   </div>
                 )}
+              <div className="candidateOverlayName">
+                {" "}
+                {candidate.position + " | " + candidate.name}{" "}
+              </div>
+              <div className="candidateOverlaySlate">
+                {" "}
+                {candidate.slate.toUpperCase()}{" "}
+              </div>
               {this.getAppropriatePlatformText(pageType)}
             </div>
           </div>

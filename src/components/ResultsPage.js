@@ -14,7 +14,7 @@ class ResultsPage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/usac.elections2018/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
     )
       .then(res => res.json())
       .then(data => {
@@ -54,7 +54,7 @@ class ResultsPage extends React.Component {
       );
     }
     table = this.state.candidates.map(position => {
-      if (position.results != "") {
+      if (position.results != "n") {
         return (
           <ResultsTable
             key={position.position}
@@ -76,8 +76,6 @@ class ResultsPage extends React.Component {
     return (
       <div>
         {table}
-        <hr />
-        <HackyReferendaTable />
       </div>
     );
   }

@@ -25,7 +25,7 @@ class EndorsementsPage extends React.Component {
         var endorsedCandidates = [];
         var nonendorsedCandidates = [];
         var endorsedIndex = -1; // Works correctly for selection
-        var nonEndorsedIndex = 13;
+        var nonEndorsedIndex = 10;
         var images = [];
         profiles.map(pos => {
           pos.candidates.map(candidate => {
@@ -53,7 +53,7 @@ class EndorsementsPage extends React.Component {
               let potentialImage = data.images.s3[candidate.image]
                 ? data.images.s3[candidate.image]["url"]
                 : null;
-              images[endorsedIndex] = potentialImage;
+              images[nonEndorsedIndex] = potentialImage;
               candidate.image = potentialImage;
             }
           });

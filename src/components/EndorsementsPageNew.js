@@ -147,11 +147,7 @@ class ProfilePage extends React.Component {
             value: index + 1
           });
           let sortedCandidates = position.candidates.sort(function(a, b) {
-            if (
-              a.name.slice(a.name.lastIndexOf(" ")) <
-              b.name.slice(b.name.lastIndexOf(" "))
-            )
-              return -1;
+            if (a.endorsed == "Yes") return -1;
             else return 1;
           });
           sortedCandidates.forEach(function(candidate) {
@@ -234,9 +230,9 @@ class ProfilePage extends React.Component {
   // TODO: onclick handler passes in whole candidate
   printCandidates(candidates, offset) {
     const candidateCards = candidates.map(function(candidate, index) {
-      let classcandidate = "notEndorsed";
-      // if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
-      //   classcandidate = "endorsed";
+      let classcandidate = "notEndorsed red";
+      if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
+        classcandidate = "endorsed";
       let style = {
         backgroundImage: "url(" + candidate.image + ")"
       };
@@ -305,7 +301,7 @@ class ProfilePage extends React.Component {
               hasNext={this.state.currentIndex + 1 < this.state.totalCandidates}
               src={this.state.images[this.state.currentIndex]}
               candidate={this.state.candidates[this.state.currentIndex]}
-              pageType="platforms"
+              pageType="endorsements"
             />
           )}
         </div>
