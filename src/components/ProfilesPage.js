@@ -9,7 +9,7 @@ class DropDown extends React.Component {
     super(...args);
 
     this.state = {
-      active: false
+      active: false,
     };
     this.toggleDropDown = this.toggleDropDown.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
@@ -22,13 +22,13 @@ class DropDown extends React.Component {
     switch (action) {
       case "close":
         this.setState({
-          active: false
+          active: false,
         });
         document.removeEventListener("click", this.handleDocumentClick);
         break;
       default:
         this.setState({
-          active: true
+          active: true,
         });
         document.addEventListener("click", this.handleDocumentClick);
         break;
@@ -122,7 +122,7 @@ class ProfilePage extends React.Component {
       dropdownOptions: null,
       images: null,
       loaded: false,
-      totalCandidates: null
+      totalCandidates: null,
     };
     this.handleSelection = this.handleSelection.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -133,20 +133,20 @@ class ProfilePage extends React.Component {
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         let candidatesTemp = [];
         let imagesTemp = [];
         let dropdownOptions = [{ display: "ALL CANDIDATES", value: 0 }];
         let candidatesRes = data.data["data.aml"].profiles;
-        candidatesRes.forEach(function(position, index) {
+        candidatesRes.forEach(function (position, index) {
           dropdownOptions.push({
             display: position.position.toUpperCase(),
-            value: index + 1
+            value: index + 1,
           });
-          let sortedCandidates = position.candidates.sort(function(a, b) {
+          let sortedCandidates = position.candidates.sort(function (a, b) {
             if (
               a.name.slice(a.name.lastIndexOf(" ")) <
               b.name.slice(b.name.lastIndexOf(" "))
@@ -154,7 +154,7 @@ class ProfilePage extends React.Component {
               return -1;
             else return 1;
           });
-          sortedCandidates.forEach(function(candidate) {
+          sortedCandidates.forEach(function (candidate) {
             candidate.position = position.position;
             candidatesTemp.push(candidate);
             // if available image on s3
@@ -172,8 +172,8 @@ class ProfilePage extends React.Component {
         });
         let profilesImgReplace = data.data["data.aml"].profiles;
         let totalCount = 0;
-        profilesImgReplace.forEach(function(position) {
-          position.candidates.forEach(function(candidate) {
+        profilesImgReplace.forEach(function (position) {
+          position.candidates.forEach(function (candidate) {
             totalCount++;
             let potentialImage = null;
             if (data.images.s3[candidate.image])
@@ -191,7 +191,7 @@ class ProfilePage extends React.Component {
           candidates: candidatesTemp,
           dropdownOptions: dropdownOptions,
           profiles: profilesImgReplace,
-          totalCandidates: totalCount
+          totalCandidates: totalCount,
         });
       });
   }
@@ -202,7 +202,7 @@ class ProfilePage extends React.Component {
 
   handleSelection(item) {
     this.setState({
-      displayValue: item.display
+      displayValue: item.display,
     });
   }
   openModal(e, index) {
@@ -218,33 +218,33 @@ class ProfilePage extends React.Component {
     if (e != undefined) {
       e.preventDefault();
     }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1
+    this.setState((prevState) => ({
+      currentIndex: prevState.currentIndex - 1,
     }));
   }
   findNext(e) {
     if (e != undefined) {
       e.preventDefault();
     }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1
+    this.setState((prevState) => ({
+      currentIndex: prevState.currentIndex + 1,
     }));
   }
   // eventually use images from candidates array as inline style for background image
   // TODO: onclick handler passes in whole candidate
   printCandidates(candidates, offset) {
-    const candidateCards = candidates.map(function(candidate, index) {
+    const candidateCards = candidates.map(function (candidate, index) {
       let classcandidate = "notEndorsed";
       // if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
       //   classcandidate = "endorsed";
       let style = {
-        backgroundImage: "url(" + candidate.image + ")"
+        backgroundImage: "url(" + candidate.image + ")",
       };
       classcandidate += " circle";
       return (
         <div
           className="candidate_card"
-          onClick={e => this.openModal(e, offset + index)}
+          onClick={(e) => this.openModal(e, offset + index)}
           key={index}
           index="{offset+index}"
         >
@@ -263,7 +263,7 @@ class ProfilePage extends React.Component {
   printPositions() {
     let index = 0;
     console.log(this.state.candidates);
-    const positions = this.state.profiles.map(function(positionInfo, i) {
+    const positions = this.state.profiles.map(function (positionInfo, i) {
       index += positionInfo.candidates.length;
       if (
         this.state.displayValue == positionInfo.position.toUpperCase() ||

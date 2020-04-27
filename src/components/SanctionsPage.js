@@ -8,21 +8,21 @@ class SanctionsPage extends React.Component {
     this.state = {
       sanctionData: 1,
       candidates: null,
-      loaded: false
+      loaded: false,
     };
   }
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         // const sanctions = data.data["data.aml"].sanctions;
         const candidateData = data.data["data.aml"].profiles;
         const images = data.images.s3;
-        candidateData.map(candidate => {
-          candidate.candidates.map(indv => {
+        candidateData.map((candidate) => {
+          candidate.candidates.map((indv) => {
             if (indv.image) {
               const img = images[indv.image];
               if (img) {
@@ -35,14 +35,14 @@ class SanctionsPage extends React.Component {
         console.log("candidates");
         console.log(candidateData);
         fetch(
-          "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.violation/"
+          "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.usac.violation/"
         )
-          .then(res => res.json())
-          .then(data => {
+          .then((res) => res.json())
+          .then((data) => {
             this.setState({
               sanctionData: data.data["data.aml"].sanctions,
               loaded: true,
-              candidates: candidateData
+              candidates: candidateData,
             });
           });
       });
@@ -63,7 +63,7 @@ class SanctionsPage extends React.Component {
         </div>
       );
     }
-    table = this.state.candidates.map(position => {
+    table = this.state.candidates.map((position) => {
       return (
         <SanctionsTable
           key={position.position}

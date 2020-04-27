@@ -8,21 +8,21 @@ class ResultsPage extends React.Component {
     super(props);
     this.state = {
       sanctionData: 1,
-      candidates: null
+      candidates: null,
     };
   }
 
   getInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         const sanctions = data.data["data.aml"].sanctions;
         const candidateData = data.data["data.aml"].profiles;
         const images = data.images.s3;
-        candidateData.map(candidate => {
-          candidate.candidates.map(indv => {
+        candidateData.map((candidate) => {
+          candidate.candidates.map((indv) => {
             if (indv.image) {
               const img = images[indv.image];
               if (img) {
@@ -53,7 +53,7 @@ class ResultsPage extends React.Component {
         </div>
       );
     }
-    table = this.state.candidates.map(position => {
+    table = this.state.candidates.map((position) => {
       if (position.results != "n") {
         return (
           <ResultsTable
@@ -73,11 +73,7 @@ class ResultsPage extends React.Component {
       }
     });
     // Group candidates by position
-    return (
-      <div>
-        {table}
-      </div>
-    );
+    return <div>{table}</div>;
   }
 }
 

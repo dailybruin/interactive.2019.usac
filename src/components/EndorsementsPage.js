@@ -8,7 +8,7 @@ class EndorsementsPage extends React.Component {
     this.state = {
       loaded: false,
       currentIndex: null,
-      endorsedLive: false
+      endorsedLive: false,
     };
     this.endorsedCandidates = [];
     this.images = [];
@@ -16,10 +16,10 @@ class EndorsementsPage extends React.Component {
 
   getCandidateInfo() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.profiles.endorsements/"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.profiles.endorsements/"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         // Go through the candidates that have endorsed field set to true
         const profiles = data.data["data.aml"].profiles;
         var endorsedCandidates = [];
@@ -27,8 +27,8 @@ class EndorsementsPage extends React.Component {
         var endorsedIndex = -1; // Works correctly for selection
         var nonEndorsedIndex = 10;
         var images = [];
-        profiles.map(pos => {
-          pos.candidates.map(candidate => {
+        profiles.map((pos) => {
+          pos.candidates.map((candidate) => {
             if (
               candidate["endorsed"] == "Yes" ||
               candidate["endorsed"] == "yes"
@@ -90,22 +90,22 @@ class EndorsementsPage extends React.Component {
     if (e != undefined) {
       e.preventDefault();
     }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex - 1
+    this.setState((prevState) => ({
+      currentIndex: prevState.currentIndex - 1,
     }));
   }
   findNext(e) {
     if (e != undefined) {
       e.preventDefault();
     }
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1
+    this.setState((prevState) => ({
+      currentIndex: prevState.currentIndex + 1,
     }));
   }
 
   printCandidates() {
     var index = 0;
-    const candidateCards = this.endorsedCandidates.map(candidate => {
+    const candidateCards = this.endorsedCandidates.map((candidate) => {
       console.log(candidate);
       let classcandidate;
       if (candidate.endorsed == "Yes") {
@@ -114,12 +114,12 @@ class EndorsementsPage extends React.Component {
         classcandidate = "notEndorsed red circle";
       }
       let style = {
-        backgroundImage: "url(" + candidate.image + ")"
+        backgroundImage: "url(" + candidate.image + ")",
       };
       return (
         <div
           className="candidate_card"
-          onClick={e => this.openModal(e, candidate.index)}
+          onClick={(e) => this.openModal(e, candidate.index)}
           key={candidate.index}
           index="{offset+index}"
         >

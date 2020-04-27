@@ -9,19 +9,19 @@ class RelatedStories extends React.Component {
 
   componentDidMount() {
     fetch(
-      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2019.usac.related"
+      "https://kerckhoff.dailybruin.com/api/packages/flatpages/interactive.2020.usac.related"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         this.setState({
-          related: data.data["data.aml"].related
+          related: data.data["data.aml"].related,
         });
       });
   }
 
   render() {
     const storyList = this.state.related ? (
-      this.state.related.map(rs => {
+      this.state.related.map((rs) => {
         return (
           <a href={rs.url} key={rs.title} target="_blank">
             <li>
