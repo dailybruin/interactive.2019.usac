@@ -17,13 +17,10 @@ class SanctionsTable extends React.Component {
         // Recipients is now a value!
         newAdd.recipientFlat = sanctionData[i].recipients[j];
         flatSanctions.push(newAdd);
-        console.log("push");
       }
     }
     // We now have a flat array listing all sanctions - we can associate these with the candidates
 
-    console.log("flat array");
-    console.log(flatSanctions);
     // Now we want to cycle through the candidates and count their sanctions
     let candidateData = this.props.candidateData;
     for (let i = 0; i < candidateData.length; i++) {
@@ -38,7 +35,6 @@ class SanctionsTable extends React.Component {
           return accumulator;
         }
       }, 0);
-      console.log(searchName + "," + number);
       candidateData[i].sanctionCount = number;
     }
 
@@ -53,9 +49,7 @@ class SanctionsTable extends React.Component {
       return 0;
     });
 
-    console.log(candidateData);
-
-    let tableSections = candidateData.map(c => (
+    let tableSections = candidateData.map((c) => (
       <SanctionsEntry
         key={c.name}
         name={c.name}

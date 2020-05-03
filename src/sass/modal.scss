@@ -6,7 +6,7 @@
   position: fixed;
   box-sizing: border-box;
   display: inline-block;
-  padding: 5px;
+  padding: 20px;
   z-index: 999;
   max-height: 100%;
   top: 50%;
@@ -43,7 +43,6 @@
   border: 5px solid #fff;
   overflow: hidden;
   top: 0%;
-
 }
 
 .modal-overlay {
@@ -88,7 +87,7 @@
   border-radius: 5px 0 0 5px;
   height: 50px;
   line-height: 40px;
-  font-size: 60px;
+  font-size: 40px;
   margin: 0 2px;
 }
 
@@ -162,31 +161,31 @@
   flex: 5;
   max-width: 100%;
   overflow-y: scroll;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .candidateOverlayName {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 2em;
 }
 
 .candidateOverlaySlate {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: gray;
 }
 
 .candidateOverlaySlate.endorsedBar {
   background-color: #06ce00;
   color: white;
-  text-align:center;
+  text-align: center;
   margin-bottom: 2px;
 }
 
 .candidateOverlaySlate.notEndorsedBar {
   background-color: red;
   color: white;
-  text-align:center;
+  text-align: center;
   margin-bottom: 2px;
 }
 

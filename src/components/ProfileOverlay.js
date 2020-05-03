@@ -25,21 +25,20 @@ class ProfileOverlay extends React.Component {
 
   getAppropriatePlatformText(pageType) {
     if (pageType === "endorsements") {
-      console.log(this.props.candidate.endorsement_text);
       return (
         <div
           dangerouslySetInnerHTML={{
             __html: this.props.candidate.endorsement_text.replace(
               /(?:\r\n\r\n\r\n)/g,
               "</br></br>"
-            )
+            ),
           }}
           className="candidateOverlayPlatform"
         />
       );
     } else {
       // platforms
-      let bulletedPlatforms = this.props.candidate.platform.map(bullet => {
+      let bulletedPlatforms = this.props.candidate.platform.map((bullet) => {
         return <li>{bullet}</li>;
       });
 
@@ -60,7 +59,7 @@ class ProfileOverlay extends React.Component {
       findPrev,
       src,
       candidate,
-      pageType
+      pageType,
     } = this.props;
 
     // if (!src) {
@@ -86,7 +85,7 @@ class ProfileOverlay extends React.Component {
               onClick={closeModal}
               onKeyDown={this.handleKeyDown}
             >
-              &times;
+              x
             </a>
             {hasPrev && (
               <a
@@ -95,7 +94,7 @@ class ProfileOverlay extends React.Component {
                 onClick={findPrev}
                 onKeyDown={this.handleKeyDown}
               >
-                &lsaquo;
+                {"<"}
               </a>
             )}
             {hasNext && (
@@ -105,7 +104,7 @@ class ProfileOverlay extends React.Component {
                 onClick={findNext}
                 onKeyDown={this.handleKeyDown}
               >
-                &rsaquo;
+                {">"}
               </a>
             )}
           </div>
@@ -114,25 +113,25 @@ class ProfileOverlay extends React.Component {
               <img src={src} className="candidateModalImage" />
             </div>
             <div className="candidateOverlay">
-            {pageType === "endorsements" &&
-                endorsed == "ENDORSED" && (
-                  <div className="candidateOverlaySlate endorsedBar">
-                    {endorsed}
-                  </div>
-                )}
-              {pageType === "endorsements" &&
-                endorsed == "NOT ENDORSED" && (
-                  <div className="candidateOverlaySlate notEndorsedBar">
-                    {endorsed}
-                  </div>
-                )}
+              {pageType === "endorsements" && endorsed == "ENDORSED" && (
+                <div className="candidateOverlaySlate endorsedBar">
+                  {endorsed}
+                </div>
+              )}
+              {pageType === "endorsements" && endorsed == "NOT ENDORSED" && (
+                <div className="candidateOverlaySlate notEndorsedBar">
+                  {endorsed}
+                </div>
+              )}
               <div className="candidateOverlayName">
                 {" "}
-                {candidate.position + " | " + candidate.name}{" "}
+                {candidate.position &&
+                  candidate.position + " | " + candidate.name &&
+                  candidate.name}{" "}
               </div>
               <div className="candidateOverlaySlate">
                 {" "}
-                {candidate.slate.toUpperCase()}{" "}
+                {candidate.slate && candidate.slate.toUpperCase()}{" "}
               </div>
               {this.getAppropriatePlatformText(pageType)}
             </div>

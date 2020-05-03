@@ -106,7 +106,6 @@ class EndorsementsPage extends React.Component {
   printCandidates() {
     var index = 0;
     const candidateCards = this.endorsedCandidates.map((candidate) => {
-      console.log(candidate);
       let classcandidate;
       if (candidate.endorsed == "Yes") {
         classcandidate = "endorsed circle";

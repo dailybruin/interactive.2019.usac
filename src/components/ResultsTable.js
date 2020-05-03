@@ -20,7 +20,6 @@ class ResultsTable extends React.Component {
       return 0;
     });
 
-    console.log(candidateData);
 
     let tableSections = candidateData.map(c => (
       <ResultsEntry

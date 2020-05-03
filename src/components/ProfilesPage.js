@@ -143,7 +143,7 @@ class ProfilePage extends React.Component {
         let candidatesRes = data.data["data.aml"].profiles;
         candidatesRes.forEach(function (position, index) {
           dropdownOptions.push({
-            display: position.position.toUpperCase(),
+            display: position.position && position.position.toUpperCase(),
             value: index + 1,
           });
           let sortedCandidates = position.candidates.sort(function (a, b) {
@@ -161,9 +161,7 @@ class ProfilePage extends React.Component {
             let potentialImage = null;
             if (data.images.s3[candidate.image])
               potentialImage = data.images.s3[candidate.image].url;
-            console.log(potentialImage);
             if (potentialImage) {
-              console.log("push");
               imagesTemp.push(potentialImage);
             } else {
               imagesTemp.push(null);
@@ -235,8 +233,8 @@ class ProfilePage extends React.Component {
   printCandidates(candidates, offset) {
     const candidateCards = candidates.map(function (candidate, index) {
       let classcandidate = "notEndorsed";
-      // if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
-      //   classcandidate = "endorsed";
+      if (candidate.endorsed == "Yes" || candidate.endorsed == "yes")
+        classcandidate = "endorsed";
       let style = {
         backgroundImage: "url(" + candidate.image + ")",
       };
@@ -246,13 +244,13 @@ class ProfilePage extends React.Component {
           className="candidate_card"
           onClick={(e) => this.openModal(e, offset + index)}
           key={index}
-          index="{offset+index}"
+          index={offset + index}
         >
           <div className={classcandidate} style={style} />
           <div className="candidate-info">
             <div className="candidateName">{candidate.name}</div>
             <div className="candidateSlate">
-              {candidate.slate.toUpperCase()}
+              {candidate.slate && candidate.slate.toUpperCase()}
             </div>
           </div>
         </div>
@@ -262,12 +260,13 @@ class ProfilePage extends React.Component {
   }
   printPositions() {
     let index = 0;
-    console.log(this.state.candidates);
     const positions = this.state.profiles.map(function (positionInfo, i) {
       index += positionInfo.candidates.length;
       if (
-        this.state.displayValue == positionInfo.position.toUpperCase() ||
-        this.state.displayValue == "ALL CANDIDATES"
+        this.state.displayValue &&
+        positionInfo.position &&
+        (this.state.displayValue == positionInfo.position.toUpperCase() ||
+          this.state.displayValue == "ALL CANDIDATES")
       )
         return (
           <div className="positionRow" key={i}>

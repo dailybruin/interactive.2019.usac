@@ -14,7 +14,7 @@ class SanctionsEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
     };
 
     this.toggleList = this.toggleList.bind(this);
@@ -28,7 +28,7 @@ class SanctionsEntry extends React.Component {
   }
 
   render() {
-    let list = this.props.list.map(sanctions => {
+    let list = this.props.list.map((sanctions) => {
       return (
         <div className="sanction-list-entry">
           <a href={sanctions.link} target="_blank">
@@ -39,7 +39,7 @@ class SanctionsEntry extends React.Component {
             <div
               className="entry-blurb"
               dangerouslySetInnerHTML={{
-                __html: sanctions.brief.replace(/(?:\r\n|\r|\n)/g, "</br>")
+                __html: sanctions.brief.replace(/(?:\r\n|\r|\n)/g, "</br>"),
               }}
             />
           </a>
@@ -59,7 +59,9 @@ class SanctionsEntry extends React.Component {
           </div>
           <div className="info">
             <div className="name">{this.props.name}</div>
-            <div className="slate">{this.props.slate.toUpperCase()}</div>
+            <div className="slate">
+              {this.props.slate && this.props.slate.toUpperCase()}
+            </div>
           </div>
           <div className="score">{this.props.count}</div>
         </div>

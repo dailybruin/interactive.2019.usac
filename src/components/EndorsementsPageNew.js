@@ -157,9 +157,7 @@ class ProfilePage extends React.Component {
             let potentialImage = null;
             if (data.images.s3[candidate.image])
               potentialImage = data.images.s3[candidate.image].url;
-            console.log(potentialImage);
             if (potentialImage) {
-              console.log("push");
               imagesTemp.push(potentialImage);
             } else {
               imagesTemp.push(null);
@@ -248,7 +246,7 @@ class ProfilePage extends React.Component {
           <div className="candidate-info">
             <div className="candidateName">{candidate.name}</div>
             <div className="candidateSlate">
-              {candidate.slate.toUpperCase()}
+              {candidate.slate && candidate.slate.toUpperCase()}
             </div>
           </div>
         </div>
@@ -258,7 +256,6 @@ class ProfilePage extends React.Component {
   }
   printPositions() {
     let index = 0;
-    console.log(this.state.candidates);
     const positions = this.state.profiles.map(function (positionInfo, i) {
       index += positionInfo.candidates.length;
       if (

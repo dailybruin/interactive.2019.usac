@@ -7,33 +7,33 @@ const navItems = {
     links: [
       {
         name: "CANDIDATES",
-        link: "/candidates"
+        link: "/candidates",
       },
       {
         name: "VIOLATIONS",
-        link: "/violations"
+        link: "/violations",
       },
       {
         name: "ENDORSEMENTS",
-        link: "/endorsements"
+        link: "/endorsements",
       },
-      {
-        name: "RESULTS",
-        link: "/results"
-      },
+      // {
+      //   name: "RESULTS",
+      //   link: "/results",
+      // },
       {
         name: "RELATED",
-        link: "/related"
-      }
-    ]
-  }
+        link: "/related",
+      },
+    ],
+  },
 };
 
 class Navbar extends React.Component {
   render() {
     let jsonKeys = Object.keys(navItems.content);
-    let links = jsonKeys.map(t =>
-      navItems.content[t].map(e => <MenuLink name={e.name} dest={e.link} />)
+    let links = jsonKeys.map((t) =>
+      navItems.content[t].map((e) => <MenuLink name={e.name} dest={e.link} />)
     );
     return (
       <nav>
